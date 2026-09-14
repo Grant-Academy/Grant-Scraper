@@ -13,3 +13,10 @@ __pycache__/
 .venv/
 venv/
 .DS_Store
+
+# grantscrape prototype
+runs/
+*.pyc
+*.egg-info/
+build/
+.pytest_cache/
