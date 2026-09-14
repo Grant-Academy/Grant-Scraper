@@ -41,7 +41,10 @@ def load_manifest(run_dir: Path) -> list[dict]:
 
 
 def _dedupe_key(a: Award) -> tuple:
-    return (squash_ws(a.recipient_name).lower(), a.year, a.amount, squash_ws(a.project_title or "").lower())
+    """Same recipient, year, amount, title, discipline and programme = the same award extracted twice.
+    Discipline and programme matter: one person can get equal grants in two categories of the same list."""
+    return (squash_ws(a.recipient_name).lower(), a.year, a.amount, squash_ws(a.project_title or "").lower(),
+            squash_ws(a.discipline or "").lower(), squash_ws(a.program or "").lower())
 
 
 def validate_run(run_dir: Path) -> ValidationResult:

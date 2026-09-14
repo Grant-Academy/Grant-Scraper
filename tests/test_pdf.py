@@ -41,3 +41,14 @@ def test_chunk_ids_sequential_across_pages():
 def test_pdf_pages_carry_document_title_so_later_pages_know_the_year():
     chunks = _chunks()
     assert "MYÖNNETYT APURAHAT 2024" in chunks[2].text.splitlines()[0]
+
+
+def test_continuation_page_inherits_the_last_table_title():
+    from grantscrape.pdf import continuation_titles
+    pages = [
+        [[["Varsovan kirjailijaresidenssi", ""], ["Hakija", "Myönnetty"], ["A", "400 €"]],
+         [["Kaunokirjallisuus", ""], ["Hakija", "Myönnetty"], ["B", "6 000 €"]]],
+        [[["Hakija", "Myönnetty"], ["C", "6 000 €"]]],                                   # continues Kaunokirjallisuus
+        [[["Tietokirjallisuus", None], ["Hakija", "Myönnetty"], ["D", "5 000 €"]]],       # starts with its own title
+    ]
+    assert continuation_titles(pages) == [None, "Kaunokirjallisuus", None]

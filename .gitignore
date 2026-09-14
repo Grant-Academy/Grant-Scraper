@@ -20,3 +20,4 @@ runs/
 *.egg-info/
 build/
 .pytest_cache/
+.claude/scheduled_tasks.lock

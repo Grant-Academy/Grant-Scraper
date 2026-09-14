@@ -119,3 +119,25 @@ def test_type_heuristic_with_marker_still_penalises():
     s = score_row(_row(recipient_name="Teatteri Metamorfoosi ry", recipient_raw="Teatteri Metamorfoosi ry", recipient_type="person",
                        amount=3000, amount_raw="€ 3.000", year=2024, evidence="**Teatteri Metamorfoosi ry** – € 3.000"), chunk, year_hint=2024)
     assert any("heuristic" in r for r in s.reasons)
+
+
+def _named(raw, chunk_line):
+    chunk = f"# 2024\n\n{chunk_line}\n"
+    return score_row(_row(recipient_name=raw, recipient_raw=raw, recipient_type="unknown", amount=500, amount_raw="500 €",
+                          year=2024, evidence=chunk_line), chunk, year_hint=2024)
+
+
+def test_truncated_name_ending_in_lone_letter_goes_to_review():
+    s = _named("Etelä-Karjalan arkeologian harrastajat J", "| 2024124 | Etelä-Karjalan arkeologian harrastajat J | Kaivaus | 500 € |")
+    assert any("malformed" in r for r in s.reasons) and s.rule_score <= 0.7
+
+
+def test_comma_without_space_inside_name_is_malformed():
+    s = _named("Al,Busultan, Bilal ja työryhmä", "**Al,Busultan, Bilal ja työryhmä** 500 €")
+    assert any("malformed" in r for r in s.reasons)
+
+
+def test_ordinary_names_are_not_malformed():
+    for raw in ("Fabritius, Noora", "Hänninen Mikko", "Huuska (Snow) Tapio (Cristal)", "Oblivia & KlangLab", "J. K. Virtanen", "Yli, Annala, Kari", "2nd Generation Lynx Larynx"):
+        s = _named(raw, f"**{raw}** 500 €")
+        assert not any("malformed" in r for r in s.reasons), raw

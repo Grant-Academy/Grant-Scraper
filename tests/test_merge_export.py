@@ -128,3 +128,11 @@ def test_combine_writes_csv_json_review_and_summary(tmp_path):
     assert s["by_year"]["2026"]["rows"] == 2
     assert "esitystaide" in s["discipline_by_year"]["2026"]
     assert summary == s
+
+
+def test_same_person_same_amount_in_two_categories_is_not_a_duplicate(tmp_path):
+    a = dict(GOOD, project_title=None, discipline="kaunokirjallisuus")
+    b = dict(GOOD, project_title=None, discipline="tietokirjallisuus")
+    result = validate_run(_make_run(tmp_path, rows=(a, b)))
+    assert len(result.rows) == 2
+    assert result.duplicates_dropped == 0

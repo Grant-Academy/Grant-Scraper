@@ -24,6 +24,18 @@ class Score:
         self.reasons.append(reason)
 
 
+def malformed_name(name: str | None) -> str | None:
+    """Cheap signs that a published name is truncated or garbled (common in PDF tables and hand-typed lists)."""
+    n = squash_ws(name).strip("*| ")
+    if not n:
+        return None
+    if re.search(r"\s[A-ZÅÄÖ]$", n):
+        return "ends in a lone letter, possibly cut off"
+    if re.search(r"\w,\w", n):
+        return "comma without a space inside the name"
+    return None
+
+
 def _in(needle: str | None, haystack_norm: str) -> bool:
     if not needle:
         return False
@@ -59,6 +71,10 @@ def score_row(row: RawRow, chunk_text: str, year_hint: int | None) -> Score:
         new = [t for t in re.findall(r"[\w-]+", squash_ws(row.recipient_name).lower()) if t not in raw_toks]
         if new:
             s.penalise(0.1, f"recipient_name rewritten from source ({', '.join(new)} not in '{row.recipient_raw}'): check spelling")
+
+    problem = malformed_name(row.recipient_raw or row.recipient_name)
+    if problem:
+        s.penalise(0.3, f"recipient name looks malformed in the source ({problem}): check the page")
 
     guessed = guess_recipient_type(row.recipient_name)
     # The heuristic only has positive evidence for organisation/group (ry, säätiö, työryhmä, &...); "person" just means

@@ -19,6 +19,18 @@ Read the brief first: **[docs/challenge.md](docs/challenge.md)**.
 | [`data/ground-truth/`](data/ground-truth/README.md) | 44 003 award rows across 187 funders we have already extracted, every one with its source URL. Both the rows and a per-funder coverage index are in the repo. |
 | [`eval/score.py`](eval/score.py) | Scores your CSV / JSON / JSONL against the ground truth for one funder: precision, recall, amount accuracy, title/description retention, and whether your confidence scores were honest. Standard library only. |
 
+## Prototype in this repo: grantscrape
+
+Deterministic Python CLI + Claude Code skills (`.claude/skills/grant-extract`, `grant-review`). How it works, results and the demo script: **[docs/grantscrape.md](docs/grantscrape.md)**.
+
+```bash
+pip install -e '.[dev]'
+grantscrape discover https://www.hubersaatio.fi/
+grantscrape fetch https://www.hubersaatio.fi/myonnetyt-apurahat/ --run hubersaatio --foundation "Samuel Huberin taidesäätiö"
+# in Claude Code: "extract grants from https://www.hubersaatio.fi/" runs the grant-extract skill end to end
+grantscrape validate --run hubersaatio && grantscrape combine --out out
+```
+
 ## Quick start
 
 ```bash

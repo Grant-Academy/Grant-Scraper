@@ -9,7 +9,7 @@ You drive the deterministic `grantscrape` CLI and do the judgement work yourself
 
 Run every command from the repo root. Work directory per foundation: `runs/<slug>/`.
 
-**The slug is the funder's `foundation_slug`** (kebab-case, e.g. `hubersaatio`, `suomen-tietokirjailijat`). If the funder already appears in `data/ground-truth/coverage.json`, use that exact slug so the output can be scored; otherwise derive it from the name or domain. Output rows follow `schema/award.schema.json`.
+**The slug is the funder's `foundation_slug`** (kebab-case, e.g. `hubersaatio`, `suomen-tietokirjailijat`). If the funder already appears in `data/ground-truth/coverage.json`, use that exact slug so the output can be scored (when you are told the ground truth is held out, use the slug you are given instead of reading it); otherwise derive it from the name or domain. Output rows follow `schema/award.schema.json`.
 
 ## 1. Find the awards page
 
@@ -84,7 +84,7 @@ Report to the user, in this order:
 1. Rows extracted and rows in needs-review, per foundation, and the ground-truth score if there is one.
 2. The top review reasons, and two or three example review rows with why they are there.
 3. One or two cross-foundation observations from `out/summary.json` (for example which disciplines grow or shrink across years, or the person versus organisation share).
-4. Paths: `out/combined.csv`, `out/combined.json`, `out/needs_review.csv`.
+4. Paths: `out/awards.jsonl` (all rows, production schema), `out/table.csv`, `out/needs_review.csv`, `out/summary.json`.
 
 ## Hard rules
 

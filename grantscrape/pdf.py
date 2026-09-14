@@ -27,10 +27,34 @@ def _table_to_markdown(table: list[list[str | None]]) -> str:
     return "\n".join(lines)
 
 
-def _page_markdown(page, page_no: int, doc_title: str = "") -> str:
+def _title_row(row: list[str | None]) -> str | None:
+    """A table row with exactly one non-empty cell is a title spanning the table (e.g. a category name)."""
+    cells = [squash_ws(c) for c in row if c and squash_ws(c)]
+    return cells[0] if len(cells) == 1 and not re.search(r"\d", cells[0]) else None
+
+
+def continuation_titles(tables_per_page: list[list[list[list[str | None]]]]) -> list[str | None]:
+    """For each page: the table title it continues from the previous page, or None if it starts its own."""
+    out: list[str | None] = []
+    carry: str | None = None
+    for tables in tables_per_page:
+        first_rows = [next((r for r in t if any(c and c.strip() for c in r)), None) for t in tables]
+        starts_titled = bool(first_rows) and first_rows[0] is not None and _title_row(first_rows[0]) is not None
+        out.append(None if (starts_titled or not tables) else carry)
+        for t in tables:
+            for r in t:
+                title = _title_row(r)
+                if title:
+                    carry = title
+    return out
+
+
+def _page_markdown(page, page_no: int, doc_title: str = "", continues: str | None = None, tables=None) -> str:
     title = f"{doc_title} · page {page_no}" if doc_title else f"Page {page_no}"
+    if continues:
+        title += f" · continues: {continues}"
     parts = [f"# {title} {{#page={page_no}}}"]
-    for table in page.extract_tables() or []:
+    for table in (tables if tables is not None else page.extract_tables()) or []:
         md = _table_to_markdown(table)
         if md:
             parts.append(md)
@@ -56,7 +80,9 @@ def _doc_title(pdf) -> str:
 def pdf_to_markdown_pages(data: bytes) -> list[str]:
     with pdfplumber.open(io.BytesIO(data)) as pdf:
         title = _doc_title(pdf)
-        return [_page_markdown(p, i + 1, title) for i, p in enumerate(pdf.pages)]
+        tables = [p.extract_tables() or [] for p in pdf.pages]
+        conts = continuation_titles(tables)
+        return [_page_markdown(p, i + 1, title, conts[i], tables[i]) for i, p in enumerate(pdf.pages)]
 
 
 def pdf_to_chunks(data: bytes, source_url: str, cap: int = MAX_CHARS) -> list[Chunk]:
