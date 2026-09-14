@@ -59,6 +59,25 @@ def cmd_fetch(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_discover(args: argparse.Namespace) -> int:
+    from . import discover as d
+
+    result = d.discover(args.site, probe=args.probe, name_hint=args.name)
+    host = urlsplit(result["site"]).netloc.lower()
+    out = Path(args.runs) / "_discover" / f"{host}.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(result, ensure_ascii=False, indent=1))
+    if not result["candidates"]:
+        print("no candidate award pages found; try web search for '<foundation> myönnetyt apurahat' and fetch the URL directly")
+        return 1
+    print(f"{'score':>6}  {'€ amts':>6}  {'kind':<4}  url  [link text | found via]")
+    for c in result["candidates"][: args.top]:
+        amts = c.get("amounts_on_page")
+        print(f"{c['score']:>6}  {'-' if amts is None else amts:>6}  {c['kind']:<4}  {c['url']}  [{c.get('text','')[:50]} | {', '.join(c['found_via'])}]")
+    print(f"\n{len(result['candidates'])} candidates saved to {out}")
+    return 0
+
+
 def cmd_status(args: argparse.Namespace) -> int:
     from .merge import load_manifest
 
@@ -116,10 +135,60 @@ def cmd_combine(args: argparse.Namespace) -> int:
     return 0
 
 
+def _kv(s: str | None) -> dict[str, str]:
+    return dict(part.split("=", 1) for part in (s or "").split(",") if "=" in part)
+
+
+def cmd_score(args: argparse.Namespace) -> int:
+    from .ground_truth import load_truth, score_against_truth
+
+    out = Path(args.runs) / args.run / "out"
+    extracted = json.loads((out / "rows.json").read_text())
+    if args.include_review and (out / "needs_review.json").exists():
+        extracted += json.loads((out / "needs_review.json").read_text())
+    truth = load_truth(Path(args.truth), _kv(args.map), _kv(args.where))
+    s = score_against_truth(extracted, truth, scope_years=not args.all_years)
+    (out / "score.json").write_text(json.dumps(s, ensure_ascii=False, indent=1, default=str))
+    acc = "-" if s["amount_accuracy"] is None else s["amount_accuracy"]
+    print(f"run {args.run}: extracted {s['extracted']}, truth in scope {s['truth_in_scope']}, matched {s['matched_recipient_year']}")
+    print(f"precision {s['precision']}  recall {s['recall']}  amount accuracy {acc}")
+    for m in s["missed"][:10]:
+        print(f"  missed: {m['name']} {m.get('year')} {m.get('amount')}")
+    for e in s["extra"][:10]:
+        print(f"  extra:  {e['recipient_name']} {e.get('year')} {e.get('amount')}")
+    print(f"details in {out / 'score.json'}")
+    return 0
+
+
+def cmd_extract(args: argparse.Namespace) -> int:
+    from .llm_api import extract_run, make_backend, resolve_backend_config
+
+    cfg = resolve_backend_config(args.backend, model=args.model, base_url=args.base_url)
+    try:
+        backend = make_backend(cfg)
+    except (ValueError, ImportError) as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 2
+    print(f"extracting run {args.run} with {cfg['backend']} model={cfg['model']} base={cfg['base_url'] or 'default'}")
+    report = extract_run(Path(args.runs) / args.run, backend, workers=args.workers, redo=args.redo)
+    print(f"wrote {len(report['written'])} rows file(s): {' '.join(report['written']) or '-'}")
+    for cid, err in report["failed"].items():
+        print(f"  FAILED {cid}: {err}")
+    print("next: grantscrape validate --run " + args.run)
+    return 1 if report["failed"] else 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="grantscrape", description="URL in, verifiable grant-award table out.")
     p.add_argument("--runs", default="runs", help="directory holding per-foundation run folders (default: runs)")
     sub = p.add_subparsers(dest="cmd", required=True)
+
+    d = sub.add_parser("discover", help="rank candidate award-list pages and PDFs on a foundation site")
+    d.add_argument("site", help="foundation website URL")
+    d.add_argument("--probe", type=int, default=8, help="fetch this many top candidates and count euro amounts on them")
+    d.add_argument("--top", type=int, default=15, help="rows to print")
+    d.add_argument("--name", help="foundation name, used for optional Tavily search (TAVILY_API_KEY)")
+    d.set_defaults(func=cmd_discover)
 
     f = sub.add_parser("fetch", help="download a page/PDF and split it into anchored chunks")
     f.add_argument("url", nargs="?", help="page or PDF URL")
@@ -137,6 +206,24 @@ def build_parser() -> argparse.ArgumentParser:
     v = sub.add_parser("validate", help="validate + score rows files, split rows / needs_review")
     v.add_argument("--run", required=True)
     v.set_defaults(func=cmd_validate)
+
+    x = sub.add_parser("extract", help="headless extraction of pending chunks via an LLM API (Claude, OpenRouter, Ollama, LM Studio)")
+    x.add_argument("--run", required=True)
+    x.add_argument("--backend", default="anthropic", choices=["anthropic", "openrouter", "ollama", "lmstudio", "openai"])
+    x.add_argument("--model", help="model id (default: claude-opus-5 for anthropic; required for local backends)")
+    x.add_argument("--base-url", help="OpenAI-compatible endpoint for --backend openai")
+    x.add_argument("--workers", type=int, default=4)
+    x.add_argument("--redo", action="store_true", help="re-extract chunks that already have a rows file")
+    x.set_defaults(func=cmd_extract)
+
+    sc = sub.add_parser("score", help="measure a validated run against ground-truth rows (CSV or JSON)")
+    sc.add_argument("--run", required=True)
+    sc.add_argument("--truth", required=True, help="ground truth CSV/JSON file")
+    sc.add_argument("--map", help="column mapping, e.g. name=saaja,year=vuosi,amount=summa (guessed if omitted)")
+    sc.add_argument("--where", help="filter truth rows, e.g. funder=Linnamo")
+    sc.add_argument("--include-review", action="store_true", help="count needs_review rows as extracted too")
+    sc.add_argument("--all-years", action="store_true", help="do not restrict truth to the years present in the run")
+    sc.set_defaults(func=cmd_score)
 
     c = sub.add_parser("combine", help="merge validated runs into one CSV/JSON table")
     c.add_argument("run_dirs", nargs="*", help="run directories (default: every validated run under --runs)")

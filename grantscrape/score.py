@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 
 from .normalize import find_amounts, guess_recipient_type, squash_ws
@@ -52,6 +53,12 @@ def score_row(row: RawRow, chunk_text: str, year_hint: int | None) -> Score:
         s.penalise(0.3, "year missing")
     elif year_hint is not None and row.year != year_hint:
         s.penalise(0.3, f"year {row.year} differs from section year {year_hint}")
+
+    if row.recipient_raw:
+        raw_toks = set(re.findall(r"[\w-]+", squash_ws(row.recipient_raw).lower()))
+        new = [t for t in re.findall(r"[\w-]+", squash_ws(row.recipient_name).lower()) if t not in raw_toks]
+        if new:
+            s.penalise(0.1, f"recipient_name rewritten from source ({', '.join(new)} not in '{row.recipient_raw}'): check spelling")
 
     guessed = guess_recipient_type(row.recipient_name)
     if row.recipient_type != "unknown" and guessed != row.recipient_type and not (guessed == "group" and row.recipient_type == "organisation"):

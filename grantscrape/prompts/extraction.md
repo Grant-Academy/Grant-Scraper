@@ -3,6 +3,10 @@
 You read ONE chunk of a foundation's published list of awarded grants and write every award in it as JSON.
 The chunk is markdown converted from an HTML page or a PDF page. It is usually in Finnish, sometimes Swedish or English.
 
+The first line of a chunk is usually `[section: A > B > C]`: the headings this chunk sits under on the source page, added by the tool. Use it for the year and discipline context. It is not part of the source text, so never use it as `evidence`.
+
+Chunks are cut between entries, but a very long page can still cut one. If the chunk opens with bullets or lines that belong to an entry whose name is not in this chunk, skip them and say so in `chunk_notes`. If the chunk ends with a name line whose details are cut off, extract what is there and say so in `notes`.
+
 These rules are shared by the Claude Code skill and the headless API backend. Follow them exactly.
 
 ## Output
@@ -21,7 +25,7 @@ Each `<award>`:
 
 | field | type | rule |
 |---|---|---|
-| `recipient_name` | string | The recipient in base form, natural order: `Noora Fabritius`, not `Fabritius, Noora`. Strip academic titles and credentials (`FM`, `FT`, `Fil.yo.`, `TaM`, `Dos.`, `MA`, `(Valtiotieteiden maisteri)`). Undo Finnish case endings on names: `Frigårdille` → `Frigård`, `Zaitseville` → `Zaitsev`, `Virtaselle` → `Virtanen`. Several named people in one award → join with `, `. |
+| `recipient_name` | string | The recipient in base form, natural order: `Noora Fabritius`, not `Fabritius, Noora`. Strip academic titles and credentials (`FM`, `FT`, `Fil.yo.`, `TaM`, `Dos.`, `MA`, `(Valtiotieteiden maisteri)`). Undo Finnish case endings on names, since prose often names recipients in the allative or genitive: `Virtaselle` → `Virtanen`, `Korhoselle` → `Korhonen`, `Lindqvistille` → `Lindqvist`, `Mäkisen` → `Mäkinen`. A named act, band, duo or collective keeps its name as printed (`Oblivia & KlangLab`, `Aapo & Sirje`, `Sananveisto -työryhmä`, `Mia Virtanen ja työryhmä`). Join with `, ` only when the source lists separately named individuals as co-recipients (a table cell `Lumiluoto Sinikka; Hakkarainen Henna`). |
 | `recipient_raw` | string | The recipient exactly as it appears in the chunk, copied character for character, including titles and inflection. Must be a substring of the chunk. |
 | `recipient_type` | `person` \| `organisation` \| `group` \| `unknown` | `organisation` for registered bodies (`ry`, `rf`, `oy`, `säätiö`, museums, orchestras, theatres, schools, municipalities). `group` for working groups, collectives, duos, `X ja työryhmä`, `X & Y`, or several named people. `person` for one named individual. |
 | `amount` | number \| null | Integer euros for this award. `€ 3.500` → 3500, `3 700 €` → 3700, `10,000 €` → 10000, `1000€` → 1000. null when the chunk gives no amount for this award. Never a yearly total or category total. |
@@ -79,13 +83,21 @@ Oikeusfilosofi Giorgio Agambenin teoksen *Lo stato di eccezione* (2023) suomenta
 
 → `recipient_name` "Saila Heinikoski", `recipient_raw` "Heinikoski, Saila", `purpose` "Oikeusfilosofi Giorgio Agambenin teoksen Lo stato di eccezione (2023) suomentamiseen", `project_title` "Lo stato di eccezione" only if clearly a work title, `amount` 10000, `year` from the section heading (not 2023). `evidence` may span the name line through the amount line; line breaks are compared as single spaces, but keep the `**` and `*` markers exactly as they appear.
 
-**One line per award (Suomen Muinaismuistosäätiö).**
+**One line per award (common on smaller foundations; synthetic example).**
 
 ```
-FM Hanna-Leena Puolakka: Tieteellisen tutkimusartikkelin julkaisukuluihin (arkeologia), 700 €
+FT Maija Esimerkki: Tieteellisen artikkelin julkaisukuluihin (kansatiede), 1 200 €
 ```
 
-→ `recipient_name` "Hanna-Leena Puolakka", `recipient_raw` "FM Hanna-Leena Puolakka", `purpose` "Tieteellisen tutkimusartikkelin julkaisukuluihin", `discipline` "arkeologia", `amount` 700, `evidence` the whole line. Wording drifts by year (`Roni Grén 1000 € toimitus- ja kuvakuluihin (taidehistoria)`); read each line on its own terms.
+→ `recipient_name` "Maija Esimerkki", `recipient_raw` "FT Maija Esimerkki", `purpose` "Tieteellisen artikkelin julkaisukuluihin", `discipline` "kansatiede", `amount` 1200, `evidence` the whole line. Wording often drifts from year to year on the same page (amount before purpose, no colon, discipline missing); read each line on its own terms.
+
+**Awards named in prose (press releases, news posts; synthetic example).**
+
+```
+Säätiö myönsi apurahan Maija Virtaselle (5 000 euroa) romaanin kirjoittamiseen.
+```
+
+→ `recipient_name` "Maija Virtanen", `recipient_raw` "Maija Virtaselle", `amount` 5000, `amount_raw` "5 000 euroa", `purpose` "romaanin kirjoittamiseen", `evidence` the whole sentence.
 
 **PDF tables (Karjalan Kulttuurirahasto).** A PDF chunk has a markdown table and then `## Page text` with the same content as raw layout text. Extract from the table; use the page text only to recover something the table lost. Each award appears once.
 

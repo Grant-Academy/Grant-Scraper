@@ -40,7 +40,7 @@ def test_evidence_matching_ignores_whitespace_differences():
 
 
 def test_recipient_raw_missing_from_chunk():
-    s = score_row(_row(recipient_raw="Laura Rämälä"), CHUNK, year_hint=2026)
+    s = score_row(_row(recipient_name="Laura Rämälä", recipient_raw="Laura Rämälä"), CHUNK, year_hint=2026)
     assert s.rule_score == 0.7
     assert any("recipient" in r for r in s.reasons)
 
@@ -89,3 +89,18 @@ def test_implausible_amount_is_penalised():
 def test_penalties_accumulate_and_floor_at_zero():
     s = score_row(_row(evidence="nope", recipient_raw="nope", amount_raw="nope", year=None, amount=1), CHUNK, year_hint=2026)
     assert s.rule_score == 0.0
+
+
+def test_reordered_name_is_not_flagged():
+    chunk = "# 2025\n\n**Fabritius, Noora** (VTM)\n\n3 700 €\n"
+    s = score_row(_row(recipient_name="Noora Fabritius", recipient_raw="Fabritius, Noora", amount=3700, amount_raw="3 700 €",
+                       evidence="**Fabritius, Noora** (VTM)", year=2025), chunk, year_hint=2025)
+    assert not any("rewritten" in r for r in s.reasons)
+
+
+def test_name_with_tokens_absent_from_source_is_flagged_softly():
+    chunk = "# 2024\n\n**Yli, Annala, Kari**\n\n5 000 €\n"
+    s = score_row(_row(recipient_name="Kari Yli-Annala", recipient_raw="Yli, Annala, Kari", amount=5000, amount_raw="5 000 €",
+                       evidence="**Yli, Annala, Kari**", year=2024), chunk, year_hint=2024)
+    assert any("rewritten" in r for r in s.reasons)
+    assert s.rule_score == 0.9

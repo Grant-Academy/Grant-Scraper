@@ -19,7 +19,7 @@ For each row:
 Record decisions in `runs/<slug>/review_decisions.json` as a list:
 
 ```json
-[{"chunk_id": "004", "recipient_raw": "FM Hanna-Leena Puolakka", "decision": "confirm|correct|keep",
+[{"chunk_id": "004", "recipient_raw": "FT Maija Esimerkki", "decision": "confirm|correct|keep",
   "field": "amount", "new_value": 700, "quote": "…exact source text…", "note": "why"}]
 ```
 

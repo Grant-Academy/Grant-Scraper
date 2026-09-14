@@ -17,10 +17,11 @@ grantscrape discover <site-url>          # ranked candidate pages and PDFs -> ru
 
 If `discover` is unavailable or finds nothing useful, look at the homepage links yourself (WebFetch) or use web search with the foundation name plus `myönnetyt apurahat`, `apurahansaajat`, `beviljade stipendier`.
 
-Choose the page(s) that list awarded grants. Prefer:
+The `€ amts` column counts euro amounts found on each probed page; a real award list usually has many. Choose the page(s) that list awarded grants. Prefer:
 - an archive or all-years page over the current-year page (`/arkisto/` beats `/myonnetyt-apurahat/`), but take both if the archive lacks the current year;
 - the page itself over a news post that links to it;
-- PDFs when that is where the list lives.
+- PDFs when that is where the list lives;
+- ONE language version. Sites often mirror the list under `/sv/` or `/en/`; fetching both duplicates every award. Take the Finnish one unless only another exists.
 
 Skip application pages (`haku`, `hae`, `hakuohjeet`), application systems (`*.apurahat.fi`), and anything behind a login.
 
