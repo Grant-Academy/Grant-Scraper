@@ -13,6 +13,7 @@ Read the brief first: **[docs/challenge.md](docs/challenge.md)**.
 | Path | What |
 |---|---|
 | [`docs/challenge.md`](docs/challenge.md) | The challenge: why, the goal, constraints, what to show in the demo. |
+| [`docs/production-pipeline.md`](docs/production-pipeline.md) | How Grant Academy stores award rows in production (table, identity key, upsert rules, provenance) and the validator that decides which extracted rows are written: name on the page, amount beside the name, year from the page, 5 % aggregate check. The reference behind the schema and the ground truth. |
 | [`docs/annex-1-target-funders.md`](docs/annex-1-target-funders.md) | ~20 Finnish funders with no award history in our database, checked one by one and tiered by how awkward their publishing format is. Pick your difficulty here. |
 | [`schema/award.schema.json`](schema/award.schema.json) | The row schema our production importer accepts, plus the challenge's `confidence` / `needs_review` / `discipline` fields. JSON Schema, with the traps written into the field descriptions (Finnish "3.000 €" is three thousand, never convert SEK to EUR, never guess a year). |
 | [`schema/example-rows.json`](schema/example-rows.json) | Two rows in that shape: one clean, one flagged for review. |
