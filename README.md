@@ -16,7 +16,7 @@ Read the brief first: **[docs/challenge.md](docs/challenge.md)**.
 | [`docs/annex-1-target-funders.md`](docs/annex-1-target-funders.md) | ~20 Finnish funders with no award history in our database, checked one by one and tiered by how awkward their publishing format is. Pick your difficulty here. |
 | [`schema/award.schema.json`](schema/award.schema.json) | The row schema our production importer accepts, plus the challenge's `confidence` / `needs_review` / `discipline` fields. JSON Schema, with the traps written into the field descriptions (Finnish "3.000 €" is three thousand, never convert SEK to EUR, never guess a year). |
 | [`schema/example-rows.json`](schema/example-rows.json) | Two rows in that shape: one clean, one flagged for review. |
-| [`data/ground-truth/`](data/ground-truth/README.md) | 44 003 award rows across 187 funders we have already extracted, every one with its source URL. The per-funder coverage index is committed; the rows themselves are handed over as a file at the table. |
+| [`data/ground-truth/`](data/ground-truth/README.md) | 44 003 award rows across 187 funders we have already extracted, every one with its source URL. Both the rows and a per-funder coverage index are in the repo. |
 | [`eval/score.py`](eval/score.py) | Scores your CSV / JSON / JSONL against the ground truth for one funder: precision, recall, amount accuracy, title/description retention, and whether your confidence scores were honest. Standard library only. |
 
 ## Quick start
@@ -24,7 +24,6 @@ Read the brief first: **[docs/challenge.md](docs/challenge.md)**.
 ```bash
 git clone https://github.com/Grant-Academy/Grant-Scraper.git
 cd Grant-Scraper
-# drop awards.jsonl (from Teemu) into data/ground-truth/
 python3 eval/score.py --pred out/your-rows.csv --funder skr --year 2025
 ```
 

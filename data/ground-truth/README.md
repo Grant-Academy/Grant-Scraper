@@ -10,7 +10,7 @@ against real answers instead of eyeballed. Exported from our database on
 | File | In git | What |
 |---|---|---|
 | `coverage.json` | yes | Per-funder summary: row count, years, how many rows carry an amount / title / description, how many distinct source pages. No names. Use it to pick a funder to evaluate against. |
-| `awards.jsonl` | **no** | The rows themselves, one JSON object per line. Handed to the team as a file at the session (ask Teemu); drop it into this folder and the scorer finds it. It is a compilation of named grant recipients, so it stays out of a public repo. |
+| `awards.jsonl` | yes | The rows themselves, one JSON object per line (25 MB). Every row is public information from the funder's own page, with that page's URL on the row. |
 
 ## Columns of `awards.jsonl`
 
