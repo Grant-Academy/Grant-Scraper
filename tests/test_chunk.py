@@ -94,3 +94,12 @@ def test_one_liner_lists_without_bold_still_split_under_cap():
     chunks = chunk_markdown(md, source_url="u", kind="html")
     assert len(chunks) > 1
     assert all(c.char_count <= MAX_CHARS for c in chunks)
+
+
+def test_bold_only_year_line_acts_as_section_heading():
+    md = "# Tutkimusapurahat\n\n**Apurahat 2026**\n\nMaija sai 3000 e.\n\n**Apurahat 2025**\n\nPekka sai 2000 e.\n"
+    chunks = chunk_markdown(md, source_url="u", kind="html", cap=260)  # body cap 60 after the breadcrumb reserve
+    pekka = [c for c in chunks if "Pekka" in c.text][0]
+    maija = [c for c in chunks if "Maija" in c.text][0]
+    assert pekka.year_hint == 2025 and "Maija" not in pekka.text
+    assert maija.year_hint == 2026

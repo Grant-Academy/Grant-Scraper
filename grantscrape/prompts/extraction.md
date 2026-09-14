@@ -25,9 +25,9 @@ Each `<award>`:
 
 | field | type | rule |
 |---|---|---|
-| `recipient_name` | string | The recipient in base form, natural order: `Noora Fabritius`, not `Fabritius, Noora`. Strip academic titles and credentials (`FM`, `FT`, `Fil.yo.`, `TaM`, `Dos.`, `MA`, `(Valtiotieteiden maisteri)`). Undo Finnish case endings on names, since prose often names recipients in the allative or genitive: `Virtaselle` → `Virtanen`, `Korhoselle` → `Korhonen`, `Lindqvistille` → `Lindqvist`, `Mäkisen` → `Mäkinen`. A named act, band, duo or collective keeps its name as printed (`Oblivia & KlangLab`, `Aapo & Sirje`, `Sananveisto -työryhmä`, `Mia Virtanen ja työryhmä`). Join with `, ` only when the source lists separately named individuals as co-recipients (a table cell `Lumiluoto Sinikka; Hakkarainen Henna`). |
+| `recipient_name` | string | The recipient **as the funder published it**: same word order, spelling and punctuation (`Fabritius, Noora`, `Hänninen Mikko`, `Vehmaanperä Juha ja Peltonen Elias`, `Oblivia & KlangLab`). Only two changes are allowed: drop a leading academic title or a parenthesised credential (`FM`, `FT`, `Fil.yo.`, `TaM`, `Dos.`, `(Valtiotieteiden maisteri)`), and put an inflected name into nominative form when prose inflects it (`Maija Virtaselle` → `Maija Virtanen`, `Korhoselle` → `Korhonen`, `Lindqvistille` → `Lindqvist`). Joint recipients stay on one row exactly as published. Never reorder, re-case or enrich a name; the production validator drops rows whose name is not on the page. When you had to undo an inflection, lower confidence to 0.8 and say so in `notes`. |
 | `recipient_raw` | string | The recipient exactly as it appears in the chunk, copied character for character, including titles and inflection. Must be a substring of the chunk. |
-| `recipient_type` | `person` \| `organisation` \| `group` \| `unknown` | `organisation` for registered bodies (`ry`, `rf`, `oy`, `säätiö`, museums, orchestras, theatres, schools, municipalities). `group` for working groups, collectives, duos, `X ja työryhmä`, `X & Y`, or several named people. `person` for one named individual. |
+| `recipient_type` | `individual` \| `organization` \| `group` \| `unknown` | `organization` for legal entities (`ry`, `rf`, `oy`, `säätiö`, `kunta`, museums, orchestras, theatres, schools). `group` for named working groups, collectives, duos, `X ja työryhmä`, `X & Y`, or several named people on one row. `individual` for one named person. |
 | `amount` | number \| null | Integer euros for this award. `€ 3.500` → 3500, `3 700 €` → 3700, `10,000 €` → 10000, `1000€` → 1000. null when the chunk gives no amount for this award. Never a yearly total or category total. |
 | `amount_raw` | string \| null | The amount text exactly as printed (`€ 3.500`, `3 700 €`). Must be a substring of the chunk. |
 | `currency` | string \| null | `EUR` when an amount is present, else null. |
@@ -35,6 +35,7 @@ Each `<award>`:
 | `project_title` | string \| null | The production, work, book or project name if the source gives one (Huber: the first bullet under the name). Foundation's own wording, markdown `*` / `**` removed. |
 | `project_description` | string \| null | The foundation's description of the project, verbatim, markdown removed. Do NOT summarise, translate or shorten. |
 | `purpose` | string \| null | What the money is for (`Väitöstutkimukseen`, `julkaisukuluihin`, `Esityksen valmistamiseen: …`), verbatim. For one-line entries like `FM X: Verkkojulkaisujen päivitykseen (arkeologia), 2000 €` the text between the name and the discipline/amount is the purpose. |
+| `program` | string \| null | The funder's own name for the grant programme or call this award belongs to, when the page groups awards by one (`Työskentelyapurahat`, `Teemahaku 2025: Oikeus ja politiikka`, `Kevään apurahat`). Verbatim; null when the page is one undifferentiated list. Discipline categories (`MUSIIKKI`) are not programmes. |
 | `discipline` | string \| null | Field(s) as the source names them, lower case, comma-separated: `esitystaide, musiikki`, `arkeologia`, `taidehistoria`. Use the category heading (`MUSIIKKI`) if the entry itself has none. null if neither exists. |
 | `evidence` | string | The shortest contiguous span of the chunk that contains the recipient and, when present, the amount. Copy it character for character from the chunk, including markdown `**`, `|` table pipes and punctuation. It is checked by exact substring match (whitespace-insensitive); anything paraphrased fails and sends the row to review. |
 | `confidence` | number 0–1 | Your honest belief that every filled field is right. See below. |
@@ -81,7 +82,7 @@ Oikeusfilosofi Giorgio Agambenin teoksen *Lo stato di eccezione* (2023) suomenta
 10 000 €
 ```
 
-→ `recipient_name` "Saila Heinikoski", `recipient_raw` "Heinikoski, Saila", `purpose` "Oikeusfilosofi Giorgio Agambenin teoksen Lo stato di eccezione (2023) suomentamiseen", `project_title` "Lo stato di eccezione" only if clearly a work title, `amount` 10000, `year` from the section heading (not 2023). `evidence` may span the name line through the amount line; line breaks are compared as single spaces, but keep the `**` and `*` markers exactly as they appear.
+→ `recipient_name` "Heinikoski, Saila", `recipient_raw` "Heinikoski, Saila", `purpose` "Oikeusfilosofi Giorgio Agambenin teoksen Lo stato di eccezione (2023) suomentamiseen", `project_title` "Lo stato di eccezione" only if clearly a work title, `amount` 10000, `year` from the section heading (not 2023). `evidence` may span the name line through the amount line; line breaks are compared as single spaces, but keep the `**` and `*` markers exactly as they appear.
 
 **One line per award (common on smaller foundations; synthetic example).**
 
@@ -107,4 +108,4 @@ Säätiö myönsi apurahan Maija Virtaselle (5 000 euroa) romaanin kirjoittamise
 | 2024052 | Lumiluoto Sinikka; Hakkarainen Henna | Runovastaanotto kutsuu klovnin luo | 2 000 € |
 ```
 
-→ `recipient_name` "Mikko Hänninen" (registry order is Surname Firstname), `project_title` the Otsikko cell, `amount` 14000, `evidence` the full table row line. The second row is a `group` named "Sinikka Lumiluoto, Henna Hakkarainen". `; ` inside a cell marks a line break in the original; a trailing `; ry` belongs to the name (`Kangaskosken-Ritakosken kyläyhdistys ry`). Ignore the application number.
+→ `recipient_name` "Hänninen Mikko" (as published, surname first), `project_title` the Otsikko cell, `amount` 14000, `evidence` the full table row line. The second row is a `group` with `recipient_name` "Lumiluoto Sinikka; Hakkarainen Henna" written as "Lumiluoto Sinikka, Hakkarainen Henna" (the `; ` is only a line break). `; ` inside a cell marks a line break in the original; a trailing `; ry` belongs to the name (`Kangaskosken-Ritakosken kyläyhdistys ry`). Ignore the application number.

@@ -11,7 +11,7 @@ _WS_RE = re.compile(r"[\s ]+")
 #   "€ 3.500", "3 700 €", "10,000 €", "1000€", "26 000 euroa", "1 500,00 €"
 _AMOUNT_RE = re.compile(
     r"(?:€\s*(\d[\d ., ]*\d|\d))"          # euro sign before number
-    r"|(?:(\d[\d ., ]*\d|\d)\s*(?:€|euroa|euro\b|eur\b))",  # number before euro word/sign
+    r"|(?:(\d[\d ., ]*\d|\d)\s*(?:€|euroa|euro\b|eur\b|e\b(?![\-–])))",  # number before euro word/sign
     re.IGNORECASE,
 )
 

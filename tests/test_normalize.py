@@ -73,3 +73,8 @@ def test_find_amounts_lists_euro_amounts_in_text():
 
 def test_squash_ws_normalises_unicode_to_nfc():
     assert squash_ws("Häkkinen") == "Häkkinen"
+
+
+def test_parse_amount_accepts_e_abbreviation():
+    assert parse_amount("3000 e") == (3000, "EUR")
+    assert find_amounts("tutkimukseen 2 500 e. Toinen") == ["2 500 e"]

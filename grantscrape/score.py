@@ -9,7 +9,7 @@ from .normalize import find_amounts, guess_recipient_type, squash_ws
 from .schema import RawRow
 
 REVIEW_THRESHOLD = 0.7        # final confidence below this -> needs_review
-SERIOUS_RULE_FLOOR = 0.8      # any single 0.3 rule penalty (missing year, ungrounded amount...) -> needs_review
+SERIOUS_RULE_FLOOR = 0.8      # rule penalties totalling more than 0.2 (e.g. any single 0.3 check) -> needs_review
 MIN_AMOUNT, MAX_AMOUNT = 50, 5_000_000
 
 
@@ -61,7 +61,10 @@ def score_row(row: RawRow, chunk_text: str, year_hint: int | None) -> Score:
             s.penalise(0.1, f"recipient_name rewritten from source ({', '.join(new)} not in '{row.recipient_raw}'): check spelling")
 
     guessed = guess_recipient_type(row.recipient_name)
-    if row.recipient_type != "unknown" and guessed != row.recipient_type and not (guessed == "group" and row.recipient_type == "organisation"):
+    # The heuristic only has positive evidence for organisation/group (ry, säätiö, työryhmä, &...); "person" just means
+    # "no marker found", so it never contradicts the extractor.
+    if guessed != "person" and row.recipient_type != "unknown" and guessed != row.recipient_type \
+            and not (guessed == "group" and row.recipient_type == "organisation"):
         s.penalise(0.15, f"recipient_type '{row.recipient_type}' disagrees with name heuristic '{guessed}'")
 
     if row.amount is not None and not (MIN_AMOUNT <= row.amount <= MAX_AMOUNT):

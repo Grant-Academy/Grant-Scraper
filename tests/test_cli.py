@@ -51,9 +51,10 @@ def test_validate_and_combine_happy_path(tmp_path, capsys):
     assert main(["--runs", str(tmp_path), "validate", "--run", "karjalan"]) == 0
     out_dir = tmp_path / "combined"
     assert main(["--runs", str(tmp_path), "combine", "--out", str(out_dir)]) == 0
-    rows = json.loads((out_dir / "combined.json").read_text())
+    rows = json.loads((out_dir / "awards.json").read_text())
     assert rows[0]["source_url"] == URL + "#page=1"
-    assert rows[0]["foundation"] == "Karjalan Kulttuurirahasto"
+    assert rows[0]["foundation_slug"] == "karjalan"
+    assert rows[0]["scan_metadata"]["foundation"] == "Karjalan Kulttuurirahasto"
 
 
 def test_discover_command_writes_candidates_file(tmp_path, monkeypatch, capsys):

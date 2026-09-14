@@ -23,9 +23,16 @@ class RawRow(BaseModel):
     project_description: str | None = None
     purpose: str | None = None
     discipline: str | None = None
+    program: str | None = None
     evidence: str
     confidence: float = Field(ge=0.0, le=1.0)
     notes: str | None = None
+
+    @field_validator("recipient_type", mode="before")
+    @classmethod
+    def _type_alias(cls, v):
+        """Accept the production schema's values (individual / organization) as well as ours."""
+        return {"individual": "person", "organization": "organisation", None: "unknown"}.get(v, v)
 
     @field_validator("recipient_name", "evidence")
     @classmethod
@@ -68,6 +75,7 @@ class Award(BaseModel):
     project_description: str | None = None
     purpose: str | None = None
     discipline: str | None = None
+    program: str | None = None
     source_url: str
     evidence: str
     confidence: float

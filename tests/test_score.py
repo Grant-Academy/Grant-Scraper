@@ -104,3 +104,18 @@ def test_name_with_tokens_absent_from_source_is_flagged_softly():
                        evidence="**Yli, Annala, Kari**", year=2024), chunk, year_hint=2024)
     assert any("rewritten" in r for r in s.reasons)
     assert s.rule_score == 0.9
+
+
+def test_type_heuristic_without_markers_does_not_penalise():
+    chunk = "# 2024\n\n| 2024124 | Etelä-Karjalan arkeologian harrastajat J | Kaivaus | 500 € |\n"
+    s = score_row(_row(recipient_name="Etelä-Karjalan arkeologian harrastajat J", recipient_raw="Etelä-Karjalan arkeologian harrastajat J",
+                       recipient_type="organisation", amount=500, amount_raw="500 €", year=2024,
+                       evidence="| 2024124 | Etelä-Karjalan arkeologian harrastajat J | Kaivaus | 500 € |"), chunk, year_hint=2024)
+    assert not any("heuristic" in r for r in s.reasons)
+
+
+def test_type_heuristic_with_marker_still_penalises():
+    chunk = "# 2024\n\n**Teatteri Metamorfoosi ry** – € 3.000\n"
+    s = score_row(_row(recipient_name="Teatteri Metamorfoosi ry", recipient_raw="Teatteri Metamorfoosi ry", recipient_type="person",
+                       amount=3000, amount_raw="€ 3.000", year=2024, evidence="**Teatteri Metamorfoosi ry** – € 3.000"), chunk, year_hint=2024)
+    assert any("heuristic" in r for r in s.reasons)

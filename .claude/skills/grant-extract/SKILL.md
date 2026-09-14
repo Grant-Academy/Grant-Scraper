@@ -9,6 +9,8 @@ You drive the deterministic `grantscrape` CLI and do the judgement work yourself
 
 Run every command from the repo root. Work directory per foundation: `runs/<slug>/`.
 
+**The slug is the funder's `foundation_slug`** (kebab-case, e.g. `hubersaatio`, `suomen-tietokirjailijat`). If the funder already appears in `data/ground-truth/coverage.json`, use that exact slug so the output can be scored; otherwise derive it from the name or domain. Output rows follow `schema/award.schema.json`.
+
 ## 1. Find the awards page
 
 ```bash
@@ -61,14 +63,25 @@ grantscrape validate --run <slug>
 - "chunks without rows file": extract those.
 - The needs-review pile is expected. Do NOT edit rows to raise their confidence or to make evidence match. Only if a review reason is `evidence not found verbatim` may you re-read the chunk and fix a transcription slip in `evidence`, `recipient_raw` or `amount_raw`; never change the extracted values to do so.
 
-## 5. Combine and report
+## 5. Combine, score, report
 
 ```bash
 grantscrape combine --out out
 ```
 
+This writes `out/awards.jsonl` / `.csv` / `.json` (every row in the production schema, with `needs_review`), `out/table.csv` (confident rows), `out/needs_review.csv` (the pile) and `out/summary.json`.
+
+If the funder is in the ground truth, measure it (restrict to the year you extracted):
+
+```bash
+grep '"foundation_slug": "<slug>"' out/awards.jsonl > out/<slug>.jsonl
+python3 eval/score.py --pred out/<slug>.jsonl --funder <slug> --year <year>
+```
+
+Report the scorer's numbers as they are. "Not in ground truth" rows may be real awards the ground truth lacks: open their `source_url` before calling them wrong.
+
 Report to the user, in this order:
-1. Rows extracted and rows in needs-review, per foundation.
+1. Rows extracted and rows in needs-review, per foundation, and the ground-truth score if there is one.
 2. The top review reasons, and two or three example review rows with why they are there.
 3. One or two cross-foundation observations from `out/summary.json` (for example which disciplines grow or shrink across years, or the person versus organisation share).
 4. Paths: `out/combined.csv`, `out/combined.json`, `out/needs_review.csv`.
@@ -77,6 +90,6 @@ Report to the user, in this order:
 
 - Never invent an amount, year or recipient. Missing is null.
 - Keep the foundation's own wording for title, description and purpose. No summarising, no translating.
-- `recipient_name` in base form and natural order; `recipient_raw` verbatim.
+- `recipient_name` as published (order, spelling), titles dropped, nominative form; `recipient_raw` verbatim.
 - Statistics, totals and instructions are not awards.
 - Respect robots.txt. No login walls, no paywalls.

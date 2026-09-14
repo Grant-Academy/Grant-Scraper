@@ -127,7 +127,7 @@ def cmd_combine(args: argparse.Namespace) -> int:
         print(f"no validated runs under {runs_root}; run `grantscrape validate` first", file=sys.stderr)
         return 1
     s = combine(run_dirs, Path(args.out))
-    print(f"combined {len(run_dirs)} run(s): {s['rows']} rows, {s['needs_review']} needs_review -> {args.out}/combined.csv, combined.json, needs_review.csv, summary.json")
+    print(f"combined {len(run_dirs)} run(s): {s['rows']} rows, {s['needs_review']} needs_review -> {args.out}/awards.jsonl|csv|json (all rows, needs_review flag), table.csv, needs_review.csv, summary.json")
     for name, f in s["by_foundation"].items():
         yrs = f["years"]
         span = f"{yrs[0]}-{yrs[-1]}" if yrs else "-"

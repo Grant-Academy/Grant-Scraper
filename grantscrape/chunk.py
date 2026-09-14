@@ -10,6 +10,9 @@ from .normalize import extract_year
 MAX_CHARS = 6000
 BREADCRUMB_RESERVE = 200  # room for the "[section: ...]" line at the top of each chunk
 _HEADING_RE = re.compile(r"^(#{1,6})\s+(.*?)(?:\s+\{#([^}]+)\})?\s*$")
+# A short line that is only bold text and names a year ("**Apurahat 2026**") acts as a section heading.
+_BOLD_YEAR_RE = re.compile(r"^\*\*([^*]{1,80})\*\*\s*$")
+_PSEUDO_LEVEL = 6
 
 
 @dataclass
@@ -42,9 +45,13 @@ class _Section:
     anchor: str | None
     body_lines: list[str] = field(default_factory=list)
     children: list["_Section"] = field(default_factory=list)
+    pseudo: bool = False  # a bold year line promoted to a heading; re-emitted as the original bold line
 
     def own_text(self) -> str:
-        head = f"{'#' * self.level} {self.title}\n\n" if self.level else ""
+        if self.pseudo:
+            head = f"**{self.title}**\n\n"
+        else:
+            head = f"{'#' * self.level} {self.title}\n\n" if self.level else ""
         return head + "\n".join(self.body_lines).strip() + "\n"
 
     def full_text(self) -> str:
@@ -56,6 +63,14 @@ def _parse_sections(md: str) -> _Section:
     stack = [root]
     for line in md.splitlines():
         m = _HEADING_RE.match(line)
+        b = None if m else _BOLD_YEAR_RE.match(line.strip())
+        if b and extract_year(b.group(1)):
+            sec = _Section(level=_PSEUDO_LEVEL, title=b.group(1).strip(), anchor=None, pseudo=True)
+            while stack[-1].level >= _PSEUDO_LEVEL:
+                stack.pop()
+            stack[-1].children.append(sec)
+            stack.append(sec)
+            continue
         if m:
             level, title, anchor = len(m.group(1)), m.group(2).strip(), m.group(3)
             sec = _Section(level=level, title=title, anchor=anchor)

@@ -113,15 +113,15 @@ def test_combine_writes_csv_json_review_and_summary(tmp_path):
     validate_run(run_b)
     out = tmp_path / "out"
     summary = combine([run_a, run_b], out)
-    with open(out / "combined.csv", newline="") as f:
+    with open(out / "table.csv", newline="") as f:
         rows = list(csv.DictReader(f))
     assert len(rows) == 2
-    assert set(rows[0].keys()) >= {"foundation", "recipient_name", "recipient_type", "amount", "currency", "year",
+    assert set(rows[0].keys()) >= {"foundation_slug", "recipient_name", "recipient_type", "amount", "currency", "award_year",
                                    "project_title", "project_description", "discipline", "source_url", "confidence"}
-    assert len(json.loads((out / "combined.json").read_text())) == 2
+    assert len(json.loads((out / "awards.json").read_text())) == 3
     with open(out / "needs_review.csv", newline="") as f:
         review = list(csv.DictReader(f))
-    assert len(review) == 1 and review[0]["review_reasons"]
+    assert len(review) == 1 and review[0]["review_reason"] and review[0]["needs_review"] == "True"
     s = json.loads((out / "summary.json").read_text())
     assert s["rows"] == 2 and s["needs_review"] == 1
     assert s["by_foundation"]["Samuel Huberin taidesäätiö"]["rows"] == 1
