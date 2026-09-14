@@ -1,0 +1,20 @@
+# The row-level ground truth is a compilation of named grant recipients.
+# It is handed to the team as a file, not published in a public repo.
+data/ground-truth/awards.jsonl
+data/ground-truth/*.csv
+
+# Prototype output
+out/
+*.local.*
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Toolchains
+node_modules/
+__pycache__/
+.venv/
+venv/
+.DS_Store

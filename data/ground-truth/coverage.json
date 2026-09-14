@@ -1,0 +1,3047 @@
+{
+  "exported_at": "2026-09-14T15:18:26.331Z",
+  "environment": "https://bdqntsyxhmonwbocxeld.supabase.co",
+  "total_rows": 44003,
+  "foundations": 187,
+  "coverage": [
+    {
+      "foundation_slug": "mes",
+      "foundation_name": "Musiikin edistämissäätiö",
+      "foundation_website": "https://hakemus.musiikinedistamissaatio.fi/",
+      "country": "fi",
+      "rows": 2389,
+      "with_amount": 2389,
+      "with_title": 0,
+      "with_description": 2365,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "skr",
+      "foundation_name": "Suomen Kulttuurirahasto",
+      "foundation_website": "https://apurahat.skr.fi",
+      "country": "fi",
+      "rows": 2319,
+      "with_amount": 2319,
+      "with_title": 12,
+      "with_description": 2319,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "taike",
+      "foundation_name": "Taide- ja kulttuurivirasto (Kuvi) — aiemmin Taiteen edistämiskeskus (Taike)",
+      "foundation_website": "https://kuvi.fi/",
+      "country": "fi",
+      "rows": 2226,
+      "with_amount": 1329,
+      "with_title": 132,
+      "with_description": 1866,
+      "years": [
+        2024,
+        2025,
+        2026,
+        2027
+      ],
+      "source_pages": 86
+    },
+    {
+      "foundation_slug": "statens-kunstfond",
+      "foundation_name": "Danish Arts Foundation",
+      "foundation_website": "https://www.kunst.dk/",
+      "country": "dk",
+      "rows": 1817,
+      "with_amount": 1817,
+      "with_title": 1817,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 102
+    },
+    {
+      "foundation_slug": "ses",
+      "foundation_name": "Suomen elokuvasäätiö",
+      "foundation_website": "https://www.ses.fi/",
+      "country": "fi",
+      "rows": 1702,
+      "with_amount": 1702,
+      "with_title": 1702,
+      "with_description": 573,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "otavan-kirjasaatio",
+      "foundation_name": "Otavan Kirjasäätiö",
+      "foundation_website": "https://otavankirjasaatio.fi/",
+      "country": "fi",
+      "rows": 1358,
+      "with_amount": 1358,
+      "with_title": 102,
+      "with_description": 1358,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 7
+    },
+    {
+      "foundation_slug": "nordisk-kulturkontakt",
+      "foundation_name": "Pohjoismainen kulttuuripiste (Nordisk Kulturkontakt)",
+      "foundation_website": "https://www.nkk.org/",
+      "country": "fi",
+      "rows": 1349,
+      "with_amount": 1349,
+      "with_title": 241,
+      "with_description": 1349,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "fili",
+      "foundation_name": "FILI – Suomen kirjallisuuden tiedotuskeskus",
+      "foundation_website": "https://fili.fi/",
+      "country": "fi",
+      "rows": 1082,
+      "with_amount": 1082,
+      "with_title": 1082,
+      "with_description": 1082,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 11
+    },
+    {
+      "foundation_slug": "wsoy-kirjallisuussaatio",
+      "foundation_name": "WSOY:n kirjallisuussäätiö",
+      "foundation_website": "https://www.wsoy-kirjallisuussaatio.fi/",
+      "country": "fi",
+      "rows": 1078,
+      "with_amount": 1078,
+      "with_title": 0,
+      "with_description": 1078,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "norsk-kulturfond",
+      "foundation_name": "Arts Council Norway – Norwegian Cultural Fund",
+      "foundation_website": "https://www.kulturdirektoratet.no/tilskuddsordninger",
+      "country": "no",
+      "rows": 907,
+      "with_amount": 907,
+      "with_title": 907,
+      "with_description": 0,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "otto-a-malm",
+      "foundation_name": "Kauppaneuvos Otto A. Malmin lahjoitusrahasto",
+      "foundation_website": "https://fi.ottomalm.fi/",
+      "country": "fi",
+      "rows": 802,
+      "with_amount": 802,
+      "with_title": 0,
+      "with_description": 802,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "aktiasaatio-porvoo",
+      "foundation_name": "Aktiasäätiö Porvoo",
+      "foundation_website": "https://aktiastiftelsen.fi/",
+      "country": "fi",
+      "rows": 743,
+      "with_amount": 743,
+      "with_title": 0,
+      "with_description": 0,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "oskar-oflund",
+      "foundation_name": "Oskar Öflunds Stiftelse",
+      "foundation_website": "https://www.oskaroflund.fi/",
+      "country": "fi",
+      "rows": 564,
+      "with_amount": 564,
+      "with_title": 0,
+      "with_description": 564,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "sjunde-mars",
+      "foundation_name": "Stiftelsen 7:nde Mars Fonden",
+      "foundation_website": "https://www.sjundemars.fi/",
+      "country": "fi",
+      "rows": 552,
+      "with_amount": 552,
+      "with_title": 0,
+      "with_description": 552,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "avek",
+      "foundation_name": "AVEK – Audiovisuaalisen kulttuurin edistämiskeskus",
+      "foundation_website": "https://kopiosto.fi/AVEK/",
+      "country": "fi",
+      "rows": 539,
+      "with_amount": 539,
+      "with_title": 534,
+      "with_description": 306,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 25
+    },
+    {
+      "foundation_slug": "musiikintekijoiden-rahasto",
+      "foundation_name": "Musiikintekijöiden rahasto",
+      "foundation_website": "https://musiikintekijat.fi/",
+      "country": "fi",
+      "rows": 533,
+      "with_amount": 533,
+      "with_title": 0,
+      "with_description": 533,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 7
+    },
+    {
+      "foundation_slug": "suomen-tietokirjailijat",
+      "foundation_name": "Suomen tietokirjailijat ry",
+      "foundation_website": "https://www.suomentietokirjailijat.fi/",
+      "country": "fi",
+      "rows": 503,
+      "with_amount": 503,
+      "with_title": 503,
+      "with_description": 503,
+      "years": [
+        2025,
+        2026
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "helsingin-kaupunki",
+      "foundation_name": "Helsingin kaupunki",
+      "foundation_website": "https://avustukset.hel.fi/",
+      "country": "fi",
+      "rows": 485,
+      "with_amount": 485,
+      "with_title": 0,
+      "with_description": 485,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "finska-lakaresallskapet",
+      "foundation_name": "Finska Läkaresällskapet",
+      "foundation_website": "https://fls.fi/",
+      "country": "fi",
+      "rows": 465,
+      "with_amount": 465,
+      "with_title": 0,
+      "with_description": 465,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "frame-contemporary-art-finland",
+      "foundation_name": "Frame Contemporary Art Finland",
+      "foundation_website": "https://frame-finland.fi/en/",
+      "country": "fi",
+      "rows": 435,
+      "with_amount": 435,
+      "with_title": 0,
+      "with_description": 435,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "orionin-tutkimussaatio",
+      "foundation_name": "Orionin Tutkimussäätiö",
+      "foundation_website": "https://www.orionintutkimussaatio.fi/",
+      "country": "fi",
+      "rows": 433,
+      "with_amount": 433,
+      "with_title": 433,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "lastentautien-tutkimussaatio",
+      "foundation_name": "Lastentautien tutkimussäätiö",
+      "foundation_website": "https://www.lastentautientutkimussaatio.fi/",
+      "country": "fi",
+      "rows": 419,
+      "with_amount": 419,
+      "with_title": 417,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "metsamiesten-saatio",
+      "foundation_name": "Metsämiesten Säätiö",
+      "foundation_website": "https://www.mmsaatio.fi/",
+      "country": "fi",
+      "rows": 389,
+      "with_amount": 389,
+      "with_title": 389,
+      "with_description": 359,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "konstnarsnamnden",
+      "foundation_name": "Swedish Arts Grants Committee",
+      "foundation_website": "https://www.konstnarsnamnden.se/en/",
+      "country": "se",
+      "rows": 361,
+      "with_amount": 361,
+      "with_title": 122,
+      "with_description": 361,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 20
+    },
+    {
+      "foundation_slug": "nordisk-kulturfond",
+      "foundation_name": "Nordisk Kulturfond",
+      "foundation_website": "https://www.nordiskkulturfond.org/",
+      "country": "dk",
+      "rows": 352,
+      "with_amount": 352,
+      "with_title": 352,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "finnfoto",
+      "foundation_name": "Finnfoto – Suomen valokuvajärjestöt",
+      "foundation_website": "https://finnfoto.fi/",
+      "country": "fi",
+      "rows": 320,
+      "with_amount": 320,
+      "with_title": 320,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 5
+    },
+    {
+      "foundation_slug": "tekniikan-edistamissaatio",
+      "foundation_name": "Tekniikan Edistämissäätiö (TES)",
+      "foundation_website": "https://tekniikanedistamissaatio.fi/",
+      "country": "fi",
+      "rows": 317,
+      "with_amount": 317,
+      "with_title": 297,
+      "with_description": 64,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "kone",
+      "foundation_name": "Koneen Säätiö",
+      "foundation_website": "https://koneensaatio.fi/apurahat/",
+      "country": "fi",
+      "rows": 315,
+      "with_amount": 315,
+      "with_title": 315,
+      "with_description": 315,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 315
+    },
+    {
+      "foundation_slug": "ella-ehrnrooth",
+      "foundation_name": "Ella ja Georg Ehrnroothin säätiö",
+      "foundation_website": "https://www.ellageorg.fi/fi",
+      "country": "fi",
+      "rows": 311,
+      "with_amount": 311,
+      "with_title": 306,
+      "with_description": 309,
+      "years": [
+        2023,
+        2024,
+        2026
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "gyllenberg",
+      "foundation_name": "Signe ja Ane Gyllenbergin säätiö",
+      "foundation_website": "https://www.gyllenbergs.fi/",
+      "country": "fi",
+      "rows": 308,
+      "with_amount": 308,
+      "with_title": 243,
+      "with_description": 0,
+      "years": [
+        2024,
+        2026
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "yrjo-jahnsson",
+      "foundation_name": "Yrjö Jahnssonin säätiö",
+      "foundation_website": "https://www.yjs.fi/",
+      "country": "fi",
+      "rows": 308,
+      "with_amount": 308,
+      "with_title": 36,
+      "with_description": 306,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "oulun-kaupunki",
+      "foundation_name": "Oulun kaupunki – kulttuuriavustukset",
+      "foundation_website": "https://www.ouka.fi/en/general-cultural-services/grants-culture",
+      "country": "fi",
+      "rows": 307,
+      "with_amount": 307,
+      "with_title": 0,
+      "with_description": 307,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 5
+    },
+    {
+      "foundation_slug": "niilo-helander-saatio",
+      "foundation_name": "Niilo Helanderin säätiö",
+      "foundation_website": "https://www.niilohelander.net/",
+      "country": "fi",
+      "rows": 304,
+      "with_amount": 304,
+      "with_title": 0,
+      "with_description": 281,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "syopasaatio",
+      "foundation_name": "Syöpäsäätiö",
+      "foundation_website": "https://syopasaatio.fi/",
+      "country": "fi",
+      "rows": 303,
+      "with_amount": 303,
+      "with_title": 303,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "kansan-sivistysrahasto",
+      "foundation_name": "Kansan Sivistysrahasto",
+      "foundation_website": "https://sivistysrahasto.fi/",
+      "country": "fi",
+      "rows": 299,
+      "with_amount": 299,
+      "with_title": 283,
+      "with_description": 299,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "magnus-ehrnrooth",
+      "foundation_name": "Magnus Ehrnroothin säätiö",
+      "foundation_website": "https://magnusehrnroothinsaatio.fi/",
+      "country": "fi",
+      "rows": 277,
+      "with_amount": 277,
+      "with_title": 277,
+      "with_description": 0,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "sigrid-juselius",
+      "foundation_name": "Sigrid Juséliuksen Säätiö",
+      "foundation_website": "https://www.sigridjuselius.fi/",
+      "country": "fi",
+      "rows": 268,
+      "with_amount": 268,
+      "with_title": 42,
+      "with_description": 268,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 11
+    },
+    {
+      "foundation_slug": "harry-schauman",
+      "foundation_name": "Harry Schaumans Stiftelse",
+      "foundation_website": "https://www.hss.fi/",
+      "country": "fi",
+      "rows": 264,
+      "with_amount": 264,
+      "with_title": 0,
+      "with_description": 264,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "walter-ahlstrom",
+      "foundation_name": "Walter Ahlströmin säätiö",
+      "foundation_website": "https://walterahlstrom.fi/",
+      "country": "fi",
+      "rows": 261,
+      "with_amount": 261,
+      "with_title": 261,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "paulon-saatio",
+      "foundation_name": "Paulon Säätiö",
+      "foundation_website": "https://www.paulo.fi/",
+      "country": "fi",
+      "rows": 259,
+      "with_amount": 259,
+      "with_title": 252,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2026
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "jyvaskylan-kaupunki",
+      "foundation_name": "Jyväskylän kaupunki – kulttuuriavustukset",
+      "foundation_website": "https://www.jyvaskyla.fi/kaupunki-ja-paatoksenteko/avustukset/kulttuuriavustukset",
+      "country": "fi",
+      "rows": 252,
+      "with_amount": 252,
+      "with_title": 0,
+      "with_description": 252,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 8
+    },
+    {
+      "foundation_slug": "paivikki-sakari-sohlberg",
+      "foundation_name": "Päivikki ja Sakari Sohlbergin Säätiö",
+      "foundation_website": "https://pss-saatio.fi/",
+      "country": "fi",
+      "rows": 242,
+      "with_amount": 242,
+      "with_title": 242,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "bergesenstiftelsen",
+      "foundation_name": "Bergesenstiftelsen",
+      "foundation_website": "https://bergesenstiftelsen.no/",
+      "country": "no",
+      "rows": 240,
+      "with_amount": 240,
+      "with_title": 240,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "billedkunstnernes-vederlagsfond",
+      "foundation_name": "The Visual Artists' Remuneration Fund (Norway)",
+      "foundation_website": "https://www.norskebilledkunstnere.no/bkv/",
+      "country": "no",
+      "rows": 240,
+      "with_amount": 240,
+      "with_title": 0,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "carlsbergfondet",
+      "foundation_name": "Carlsberg Foundation",
+      "foundation_website": "https://www.carlsbergfondet.dk/",
+      "country": "dk",
+      "rows": 240,
+      "with_amount": 240,
+      "with_title": 240,
+      "with_description": 240,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 240
+    },
+    {
+      "foundation_slug": "danmarks-frie-forskningsfond",
+      "foundation_name": "Independent Research Fund Denmark",
+      "foundation_website": "https://dff.dk/",
+      "country": "dk",
+      "rows": 240,
+      "with_amount": 237,
+      "with_title": 240,
+      "with_description": 240,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "fritt-ord",
+      "foundation_name": "Fritt Ord Foundation",
+      "foundation_website": "https://frittord.no/",
+      "country": "no",
+      "rows": 240,
+      "with_amount": 240,
+      "with_title": 240,
+      "with_description": 240,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "koda-kultur",
+      "foundation_name": "Koda Culture",
+      "foundation_website": "https://kultur.koda.dk/",
+      "country": "dk",
+      "rows": 240,
+      "with_amount": 240,
+      "with_title": 112,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 19
+    },
+    {
+      "foundation_slug": "statens-vaerksteder-for-kunst",
+      "foundation_name": "Danish Art Workshops",
+      "foundation_website": "https://svfk.dk/",
+      "country": "dk",
+      "rows": 240,
+      "with_amount": 0,
+      "with_title": 240,
+      "with_description": 222,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 240
+    },
+    {
+      "foundation_slug": "amos-anderson",
+      "foundation_name": "Amos Andersonin rahasto (Konstsamfundet)",
+      "foundation_website": "https://amosanderson.fi/",
+      "country": "fi",
+      "rows": 231,
+      "with_amount": 231,
+      "with_title": 0,
+      "with_description": 231,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "suomen-akatemia",
+      "foundation_name": "Suomen Akatemia",
+      "foundation_website": "https://www.aka.fi/",
+      "country": "fi",
+      "rows": 231,
+      "with_amount": 231,
+      "with_title": 231,
+      "with_description": 231,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 231
+    },
+    {
+      "foundation_slug": "cancerfonden",
+      "foundation_name": "Swedish Cancer Society",
+      "foundation_website": "https://www.cancerfonden.se/",
+      "country": "se",
+      "rows": 225,
+      "with_amount": 225,
+      "with_title": 225,
+      "with_description": 225,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "oca",
+      "foundation_name": "Office for Contemporary Art Norway (OCA)",
+      "foundation_website": "https://oca.no/",
+      "country": "no",
+      "rows": 224,
+      "with_amount": 224,
+      "with_title": 224,
+      "with_description": 224,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "op-tutkimussaatio",
+      "foundation_name": "OP Ryhmän Tutkimussäätiö",
+      "foundation_website": "https://tutkimusapurahat.fi/",
+      "country": "fi",
+      "rows": 223,
+      "with_amount": 223,
+      "with_title": 223,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "augustinus-fonden",
+      "foundation_name": "Augustinus Foundation",
+      "foundation_website": "https://augustinusfonden.dk/",
+      "country": "dk",
+      "rows": 222,
+      "with_amount": 222,
+      "with_title": 222,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "brita-maria-renlund",
+      "foundation_name": "Brita Maria Renlundin muistosäätiö",
+      "foundation_website": "https://bmr.fi/",
+      "country": "fi",
+      "rows": 222,
+      "with_amount": 222,
+      "with_title": 0,
+      "with_description": 222,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "kh-renlund",
+      "foundation_name": "K. H. Renlundin säätiö",
+      "foundation_website": "https://khrenlund.fi/",
+      "country": "fi",
+      "rows": 218,
+      "with_amount": 218,
+      "with_title": 218,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "olvi-saatio",
+      "foundation_name": "OLVI-säätiö",
+      "foundation_website": "https://www.olvisaatio.fi/",
+      "country": "fi",
+      "rows": 218,
+      "with_amount": 218,
+      "with_title": 0,
+      "with_description": 162,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "suomen-tiedeseura",
+      "foundation_name": "Suomen Tiedeseura",
+      "foundation_website": "https://scientiarum.fi/",
+      "country": "fi",
+      "rows": 218,
+      "with_amount": 218,
+      "with_title": 0,
+      "with_description": 218,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "forte",
+      "foundation_name": "Forte – Swedish Research Council for Health, Working Life and Welfare",
+      "foundation_website": "https://forte.se/",
+      "country": "se",
+      "rows": 216,
+      "with_amount": 216,
+      "with_title": 216,
+      "with_description": 216,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "norsk-filminstitutt",
+      "foundation_name": "Norwegian Film Institute",
+      "foundation_website": "https://www.nfi.no/",
+      "country": "no",
+      "rows": 216,
+      "with_amount": 216,
+      "with_title": 216,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "novo-nordisk-fonden",
+      "foundation_name": "Novo Nordisk Foundation",
+      "foundation_website": "https://novonordiskfonden.dk/",
+      "country": "dk",
+      "rows": 203,
+      "with_amount": 203,
+      "with_title": 203,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 15
+    },
+    {
+      "foundation_slug": "det-danske-filminstitut",
+      "foundation_name": "Danish Film Institute",
+      "foundation_website": "https://www.dfi.dk/",
+      "country": "dk",
+      "rows": 202,
+      "with_amount": 202,
+      "with_title": 202,
+      "with_description": 202,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "juho-vainion-saatio",
+      "foundation_name": "Juho Vainion Säätiö",
+      "foundation_website": "https://www.juhovainionsaatio.fi/",
+      "country": "fi",
+      "rows": 200,
+      "with_amount": 200,
+      "with_title": 200,
+      "with_description": 0,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "villum-fonden",
+      "foundation_name": "Villum Foundation",
+      "foundation_website": "https://villumfonden.dk/",
+      "country": "dk",
+      "rows": 195,
+      "with_amount": 195,
+      "with_title": 195,
+      "with_description": 195,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 195
+    },
+    {
+      "foundation_slug": "sls",
+      "foundation_name": "Svenska litteratursällskapet i Finland (SLS)",
+      "foundation_website": "https://www.sls.fi/",
+      "country": "fi",
+      "rows": 193,
+      "with_amount": 193,
+      "with_title": 0,
+      "with_description": 193,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "mary-georg-ehrnrooth",
+      "foundation_name": null,
+      "foundation_website": null,
+      "country": null,
+      "rows": 191,
+      "with_amount": 191,
+      "with_title": 190,
+      "with_description": 191,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "lut-tukisaatio",
+      "foundation_name": "LUT-yliopiston ja ammatillisen koulutuksen tukisäätiö",
+      "foundation_website": "https://lut-tukisaatio.fi/",
+      "country": "fi",
+      "rows": 186,
+      "with_amount": 180,
+      "with_title": 0,
+      "with_description": 186,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "jaes",
+      "foundation_name": "Jane ja Aatos Erkon säätiö",
+      "foundation_website": "https://jaes.fi/",
+      "country": "fi",
+      "rows": 185,
+      "with_amount": 185,
+      "with_title": 185,
+      "with_description": 165,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "fond-for-lyd-og-bilde",
+      "foundation_name": "Fund for Sound and Image",
+      "foundation_website": "https://www.kulturdirektoratet.no/fond-for-lyd-og-bilde",
+      "country": "no",
+      "rows": 180,
+      "with_amount": 180,
+      "with_title": 180,
+      "with_description": 0,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "lsr",
+      "foundation_name": "Liikesivistysrahasto",
+      "foundation_website": "https://www.lsr.fi/",
+      "country": "fi",
+      "rows": 180,
+      "with_amount": 180,
+      "with_title": 180,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 180
+    },
+    {
+      "foundation_slug": "saatioiden-post-doc-pooli",
+      "foundation_name": "Säätiöiden post doc -pooli",
+      "foundation_website": "https://www.postdocpooli.fi/",
+      "country": "fi",
+      "rows": 175,
+      "with_amount": 175,
+      "with_title": 0,
+      "with_description": 175,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 7
+    },
+    {
+      "foundation_slug": "suomalainen-tiedeakatemia",
+      "foundation_name": "Suomalainen Tiedeakatemia",
+      "foundation_website": "https://acadsci.fi/",
+      "country": "fi",
+      "rows": 175,
+      "with_amount": 175,
+      "with_title": 168,
+      "with_description": 175,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 5
+    },
+    {
+      "foundation_slug": "cultura",
+      "foundation_name": "Cultura-säätiö",
+      "foundation_website": "https://www.culturas.fi/fi",
+      "country": "fi",
+      "rows": 163,
+      "with_amount": 163,
+      "with_title": 0,
+      "with_description": 163,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "hogskolestiftelsen-osterbotten",
+      "foundation_name": "Högskolestiftelsen i Österbotten",
+      "foundation_website": "https://www.hogskolestiftelsen.fi/",
+      "country": "fi",
+      "rows": 163,
+      "with_amount": 163,
+      "with_title": 163,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 5
+    },
+    {
+      "foundation_slug": "instrumentariumin-tiedesaatio",
+      "foundation_name": "Instrumentariumin tiedesäätiö",
+      "foundation_website": "https://www.instrufoundation.fi/",
+      "country": "fi",
+      "rows": 157,
+      "with_amount": 157,
+      "with_title": 156,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "turun-yliopistosaatio",
+      "foundation_name": "Turun Yliopistosäätiö",
+      "foundation_website": "https://www.yliopistosaatio.fi/",
+      "country": "fi",
+      "rows": 157,
+      "with_amount": 157,
+      "with_title": 36,
+      "with_description": 157,
+      "years": [
+        2024,
+        2025
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "maa-ja-vesitekniikan-tuki",
+      "foundation_name": "Maa- ja vesitekniikan tuki ry",
+      "foundation_website": "https://mvtt.fi/",
+      "country": "fi",
+      "rows": 156,
+      "with_amount": 156,
+      "with_title": 156,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 39
+    },
+    {
+      "foundation_slug": "kaute",
+      "foundation_name": "KAUTE-säätiö",
+      "foundation_website": "https://kaute.fi/",
+      "country": "fi",
+      "rows": 154,
+      "with_amount": 154,
+      "with_title": 154,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "familjen-kamprads-stiftelse",
+      "foundation_name": "The Kamprad Family Foundation",
+      "foundation_website": "https://familjenkampradsstiftelse.se/",
+      "country": "se",
+      "rows": 153,
+      "with_amount": 153,
+      "with_title": 153,
+      "with_description": 153,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "forskningsradet",
+      "foundation_name": "Research Council of Norway",
+      "foundation_website": "https://www.forskningsradet.no/",
+      "country": "no",
+      "rows": 153,
+      "with_amount": 153,
+      "with_title": 153,
+      "with_description": 153,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 153
+    },
+    {
+      "foundation_slug": "stiftelsen-dam",
+      "foundation_name": "The Dam Foundation",
+      "foundation_website": "https://www.dam.no/",
+      "country": "no",
+      "rows": 153,
+      "with_amount": 153,
+      "with_title": 153,
+      "with_description": 153,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 153
+    },
+    {
+      "foundation_slug": "aivosaatio",
+      "foundation_name": "Aivosäätiö",
+      "foundation_website": "https://www.aivosaatio.fi/",
+      "country": "fi",
+      "rows": 149,
+      "with_amount": 149,
+      "with_title": 149,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "suomalais-ruotsalainen-kulttuurirahasto",
+      "foundation_name": "Suomalais-ruotsalainen kulttuurirahasto",
+      "foundation_website": "https://rahastosuomiruotsi.org/",
+      "country": "fi",
+      "rows": 149,
+      "with_amount": 103,
+      "with_title": 0,
+      "with_description": 149,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 6
+    },
+    {
+      "foundation_slug": "wihurin-rahasto",
+      "foundation_name": "Jenny ja Antti Wihurin rahasto",
+      "foundation_website": "https://wihurinrahasto.fi/",
+      "country": "fi",
+      "rows": 149,
+      "with_amount": 149,
+      "with_title": 29,
+      "with_description": 149,
+      "years": [
+        2024,
+        2025
+      ],
+      "source_pages": 7
+    },
+    {
+      "foundation_slug": "stiftelsen-abo-akademi",
+      "foundation_name": "Stiftelsen för Åbo Akademi",
+      "foundation_website": "https://stiftelsenabo.fi/",
+      "country": "fi",
+      "rows": 145,
+      "with_amount": 145,
+      "with_title": 0,
+      "with_description": 145,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "georg-malmsten-saatio",
+      "foundation_name": "Georg Malmstén -säätiö",
+      "foundation_website": "https://klaavi.fi/foundations/MAL",
+      "country": "fi",
+      "rows": 144,
+      "with_amount": 144,
+      "with_title": 0,
+      "with_description": 144,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "formas",
+      "foundation_name": "Formas – Swedish Research Council for Sustainable Development",
+      "foundation_website": "https://formas.se/",
+      "country": "se",
+      "rows": 143,
+      "with_amount": 143,
+      "with_title": 143,
+      "with_description": 142,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "crafoordska-stiftelsen",
+      "foundation_name": "The Crafoord Foundation",
+      "foundation_website": "https://www.crafoord.se/",
+      "country": "se",
+      "rows": 137,
+      "with_amount": 137,
+      "with_title": 137,
+      "with_description": 120,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "media-alan-tutkimussaatio",
+      "foundation_name": "Media-alan tutkimussäätiö",
+      "foundation_website": "https://www.mediaalantutkimussaatio.fi/",
+      "country": "fi",
+      "rows": 136,
+      "with_amount": 136,
+      "with_title": 136,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 17
+    },
+    {
+      "foundation_slug": "nokia-saatio",
+      "foundation_name": "Nokia Oyj:n Säätiö",
+      "foundation_website": "https://nokiafoundation.com/",
+      "country": "fi",
+      "rows": 134,
+      "with_amount": 134,
+      "with_title": 133,
+      "with_description": 134,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 5
+    },
+    {
+      "foundation_slug": "elmu-saatio",
+      "foundation_name": "Elävän musiikin säätiö ELMU (Lepakko-säätiö)",
+      "foundation_website": "https://elmu-saatio.fi/",
+      "country": "fi",
+      "rows": 132,
+      "with_amount": 132,
+      "with_title": 88,
+      "with_description": 127,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "bildende-kunstneres-hjelpefond",
+      "foundation_name": "The Relief Fund for Visual Artists (Norway)",
+      "foundation_website": "https://kunstfond.no/",
+      "country": "no",
+      "rows": 131,
+      "with_amount": 131,
+      "with_title": 0,
+      "with_description": 131,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "teoston-kulttuurisaatio",
+      "foundation_name": "Teoston kulttuurisäätiö",
+      "foundation_website": "https://www.teostonkulttuurisaatio.fi/",
+      "country": "fi",
+      "rows": 129,
+      "with_amount": 129,
+      "with_title": 0,
+      "with_description": 129,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "ake-wiberg",
+      "foundation_name": "Åke Wiberg Foundation",
+      "foundation_website": "https://ake-wiberg.se/",
+      "country": "se",
+      "rows": 124,
+      "with_amount": 124,
+      "with_title": 123,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "maud-kuistila",
+      "foundation_name": "Maud Kuistilan muistosäätiö",
+      "foundation_website": "https://mkmsaatio.fi/",
+      "country": "fi",
+      "rows": 124,
+      "with_amount": 124,
+      "with_title": 123,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "norla",
+      "foundation_name": "NORLA – Norwegian Literature Abroad",
+      "foundation_website": "https://norla.no/",
+      "country": "no",
+      "rows": 120,
+      "with_amount": 120,
+      "with_title": 120,
+      "with_description": 120,
+      "years": [
+        2024,
+        2025
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "statens-kunstnerstipend",
+      "foundation_name": "Government Grants for Artists",
+      "foundation_website": "https://www.kulturdirektoratet.no/statens-kunstnerstipend/information-in-english",
+      "country": "no",
+      "rows": 120,
+      "with_amount": 90,
+      "with_title": 120,
+      "with_description": 0,
+      "years": [
+        2024,
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "lahden-kaupunki",
+      "foundation_name": "Lahden kaupunki – kulttuuriavustukset",
+      "foundation_website": "https://www.lahti.fi/",
+      "country": "fi",
+      "rows": 118,
+      "with_amount": 118,
+      "with_title": 0,
+      "with_description": 118,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "svenska-folkskolans-vanner",
+      "foundation_name": "Svenska folkskolans vänner",
+      "foundation_website": "https://sfv.fi/",
+      "country": "fi",
+      "rows": 117,
+      "with_amount": 117,
+      "with_title": 0,
+      "with_description": 117,
+      "years": [
+        2023,
+        2024
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "silmasaatio",
+      "foundation_name": "Silmäsäätiö",
+      "foundation_website": "https://www.silmasaatio.fi/",
+      "country": "fi",
+      "rows": 116,
+      "with_amount": 116,
+      "with_title": 115,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "fulbright-finland",
+      "foundation_name": "Fulbright Finland Foundation",
+      "foundation_website": "https://www.fulbright.fi/",
+      "country": "fi",
+      "rows": 115,
+      "with_amount": 0,
+      "with_title": 0,
+      "with_description": 115,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "kymin-100-vuotissaatio",
+      "foundation_name": "Kymin Osakeyhtiön 100-vuotissäätiö",
+      "foundation_website": "https://www.kymin100.fi/",
+      "country": "fi",
+      "rows": 115,
+      "with_amount": 115,
+      "with_title": 115,
+      "with_description": 0,
+      "years": [
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "alli-paasikiven-saatio",
+      "foundation_name": "Alli Paasikiven Säätiö",
+      "foundation_website": "https://allinsaatio.fi/",
+      "country": "fi",
+      "rows": 114,
+      "with_amount": 114,
+      "with_title": 0,
+      "with_description": 114,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "kaks",
+      "foundation_name": "Kunnallisalan kehittämissäätiö (KAKS)",
+      "foundation_website": "https://kaks.fi/",
+      "country": "fi",
+      "rows": 112,
+      "with_amount": 107,
+      "with_title": 112,
+      "with_description": 106,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 12
+    },
+    {
+      "foundation_slug": "maj-tor-nessling",
+      "foundation_name": "Maj ja Tor Nesslingin säätiö",
+      "foundation_website": "https://www.nessling.fi/",
+      "country": "fi",
+      "rows": 109,
+      "with_amount": 109,
+      "with_title": 109,
+      "with_description": 22,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "suomen-parkinson-saatio",
+      "foundation_name": "Suomen Parkinson-säätiö",
+      "foundation_website": "https://parkinsonsaatio.fi/",
+      "country": "fi",
+      "rows": 109,
+      "with_amount": 109,
+      "with_title": 109,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "aarne-koskelon-saatio",
+      "foundation_name": null,
+      "foundation_website": null,
+      "country": null,
+      "rows": 108,
+      "with_amount": 108,
+      "with_title": 108,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "diabetestutkimussaatio",
+      "foundation_name": "Diabetestutkimussäätiö",
+      "foundation_website": "https://diabetestutkimus.fi/",
+      "country": "fi",
+      "rows": 106,
+      "with_amount": 106,
+      "with_title": 106,
+      "with_description": 106,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "fortum-neste",
+      "foundation_name": "Fortumin ja Nesteen Säätiö",
+      "foundation_website": "https://fortumnestefoundation.fi/",
+      "country": "fi",
+      "rows": 106,
+      "with_amount": 0,
+      "with_title": 106,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "hse-tukisaatio",
+      "foundation_name": "Helsingin kauppakorkeakoulun tukisäätiö",
+      "foundation_website": "https://www.aalto.fi/en/hse-support-foundation",
+      "country": "fi",
+      "rows": 105,
+      "with_amount": 105,
+      "with_title": 105,
+      "with_description": 105,
+      "years": [
+        2024
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "carina-ari-stiftelserna",
+      "foundation_name": "The Carina Ari Foundations",
+      "foundation_website": "https://www.carinaari.se/",
+      "country": "se",
+      "rows": 104,
+      "with_amount": 1,
+      "with_title": 0,
+      "with_description": 104,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "music-norway",
+      "foundation_name": "Music Norway",
+      "foundation_website": "https://musicnorway.no/",
+      "country": "no",
+      "rows": 101,
+      "with_amount": 101,
+      "with_title": 101,
+      "with_description": 101,
+      "years": [
+        2025,
+        2026,
+        2027
+      ],
+      "source_pages": 5
+    },
+    {
+      "foundation_slug": "madetoja-saatio",
+      "foundation_name": "Suomen Säveltäjäin Madetoja-säätiö",
+      "foundation_website": "https://composers.fi/saveltajille/apurahat/madetoja-saatio/",
+      "country": "fi",
+      "rows": 100,
+      "with_amount": 100,
+      "with_title": 0,
+      "with_description": 100,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "hes-saatio",
+      "foundation_name": "Hengityssairauksien tutkimussäätiö (HES-säätiö)",
+      "foundation_website": "https://www.hes-saatio.fi",
+      "country": "fi",
+      "rows": 99,
+      "with_amount": 99,
+      "with_title": 99,
+      "with_description": 98,
+      "years": [
+        2025,
+        2026
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "sakari-alhopuro",
+      "foundation_name": "Sakari Alhopuron säätiö",
+      "foundation_website": "https://www.sakarialhopuronsaatio.fi/",
+      "country": "fi",
+      "rows": 98,
+      "with_amount": 98,
+      "with_title": 98,
+      "with_description": 98,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "tyosuojelurahasto",
+      "foundation_name": "Työsuojelurahasto",
+      "foundation_website": "https://www.tsr.fi/",
+      "country": "fi",
+      "rows": 92,
+      "with_amount": 92,
+      "with_title": 92,
+      "with_description": 92,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 92
+    },
+    {
+      "foundation_slug": "suomen-taideyhdistys",
+      "foundation_name": "Suomen Taideyhdistys",
+      "foundation_website": "https://www.suomentaideyhdistys.fi/",
+      "country": "fi",
+      "rows": 90,
+      "with_amount": 90,
+      "with_title": 0,
+      "with_description": 90,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "sibelius-rahasto",
+      "foundation_name": "Suomalaisen Konserttielämän Edistämissäätiö (Sibelius-rahasto)",
+      "foundation_website": "https://composers.fi/saveltajille/apurahat/sibelius-rahasto/",
+      "country": "fi",
+      "rows": 89,
+      "with_amount": 89,
+      "with_title": 0,
+      "with_description": 89,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "korvatautien-tutkimussaatio",
+      "foundation_name": "Korvatautien tutkimussäätiö",
+      "foundation_website": "https://www.korvatautientutkimussaatio.fi/",
+      "country": "fi",
+      "rows": 87,
+      "with_amount": 87,
+      "with_title": 87,
+      "with_description": 0,
+      "years": [
+        2024,
+        2025
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "patricia-seppala",
+      "foundation_name": "Patricia Seppälän säätiö",
+      "foundation_website": "https://patriciaseppalansaatio.fi/",
+      "country": "fi",
+      "rows": 86,
+      "with_amount": 86,
+      "with_title": 0,
+      "with_description": 86,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "suomen-pankki",
+      "foundation_name": "Suomen Pankki",
+      "foundation_website": "https://www.suomenpankki.fi/",
+      "country": "fi",
+      "rows": 86,
+      "with_amount": 0,
+      "with_title": 0,
+      "with_description": 86,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "turun-kaupunki",
+      "foundation_name": "Turun kaupunki",
+      "foundation_website": "https://www.turku.fi/",
+      "country": "fi",
+      "rows": 86,
+      "with_amount": 86,
+      "with_title": 0,
+      "with_description": 86,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 6
+    },
+    {
+      "foundation_slug": "akerlund-mediasaatio",
+      "foundation_name": "C. V. Åkerlundin mediasäätiö",
+      "foundation_website": "https://akerlundinsaatio.fi/",
+      "country": "fi",
+      "rows": 84,
+      "with_amount": 84,
+      "with_title": 84,
+      "with_description": 67,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "kulturfonden-danmark-finland",
+      "foundation_name": "Tanskan ja Suomen välinen kulttuurirahasto",
+      "foundation_website": "https://hanaholmen.fi/en/dk/kulturfonden-for-danmark-og-finland",
+      "country": "fi",
+      "rows": 81,
+      "with_amount": 81,
+      "with_title": 0,
+      "with_description": 81,
+      "years": [
+        2025,
+        2026
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "lasten-syopasaatio-vare",
+      "foundation_name": "Lasten Syöpäsäätiö Väre",
+      "foundation_website": "https://vareensaatio.fi/",
+      "country": "fi",
+      "rows": 77,
+      "with_amount": 77,
+      "with_title": 75,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "porssisaatio",
+      "foundation_name": "Pörssisäätiö",
+      "foundation_website": "https://www.porssisaatio.fi/",
+      "country": "fi",
+      "rows": 77,
+      "with_amount": 77,
+      "with_title": 0,
+      "with_description": 77,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "tutkijat-maailmalle",
+      "foundation_name": "Tutkijat maailmalle -ohjelma",
+      "foundation_website": "https://tutkijatmaailmalle.fi/",
+      "country": "fi",
+      "rows": 77,
+      "with_amount": 77,
+      "with_title": 77,
+      "with_description": 77,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "lundbeckfonden",
+      "foundation_name": "Lundbeck Foundation",
+      "foundation_website": "https://lundbeckfonden.com/",
+      "country": "dk",
+      "rows": 75,
+      "with_amount": 75,
+      "with_title": 75,
+      "with_description": 72,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "podoco",
+      "foundation_name": "PoDoCo – Post Docs in Companies",
+      "foundation_website": "https://www.podoco.fi/",
+      "country": "fi",
+      "rows": 75,
+      "with_amount": 43,
+      "with_title": 75,
+      "with_description": 75,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 7
+    },
+    {
+      "foundation_slug": "svenska-kulturfonden",
+      "foundation_name": "Svenska kulturfonden",
+      "foundation_website": "https://www.kulturfonden.fi/",
+      "country": "fi",
+      "rows": 74,
+      "with_amount": 74,
+      "with_title": 15,
+      "with_description": 74,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "espoon-kaupunki",
+      "foundation_name": "Espoon kaupunki",
+      "foundation_website": "https://www.espoo.fi/",
+      "country": "fi",
+      "rows": 72,
+      "with_amount": 72,
+      "with_title": 0,
+      "with_description": 72,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 13
+    },
+    {
+      "foundation_slug": "tty-tukisaatio",
+      "foundation_name": "Tampereen teknillisen yliopiston tukisäätiö",
+      "foundation_website": "https://www.tuni.fi/en/about-us/industrial-research-fund-tampere-university-technology",
+      "country": "fi",
+      "rows": 70,
+      "with_amount": 67,
+      "with_title": 65,
+      "with_description": 70,
+      "years": [
+        2023,
+        2024,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "vantaan-kaupunki",
+      "foundation_name": "Vantaan kaupunki",
+      "foundation_website": "https://www.vantaa.fi/",
+      "country": "fi",
+      "rows": 65,
+      "with_amount": 65,
+      "with_title": 0,
+      "with_description": 65,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "ellen-artturi-nyyssonen",
+      "foundation_name": "Ellen ja Artturi Nyyssösen säätiö",
+      "foundation_website": "https://www.eans.fi/",
+      "country": "fi",
+      "rows": 64,
+      "with_amount": 64,
+      "with_title": 0,
+      "with_description": 64,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 4
+    },
+    {
+      "foundation_slug": "silma-ja-kudospankkisaatio",
+      "foundation_name": "Silmä- ja kudospankkisäätiö",
+      "foundation_website": "https://www.silmakudossaatio.fi/",
+      "country": "fi",
+      "rows": 62,
+      "with_amount": 62,
+      "with_title": 62,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "teknologiateollisuus-100v",
+      "foundation_name": "Teknologiateollisuuden 100-vuotissäätiö",
+      "foundation_website": "https://techfinland100.fi/",
+      "country": "fi",
+      "rows": 62,
+      "with_amount": 61,
+      "with_title": 54,
+      "with_description": 16,
+      "years": [
+        2023,
+        2025,
+        2026
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "paavo-nurmen-saatio",
+      "foundation_name": "Paavo Nurmen Säätiö",
+      "foundation_website": "https://www.paavonurmensaatio.fi/",
+      "country": "fi",
+      "rows": 61,
+      "with_amount": 61,
+      "with_title": 61,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "kalevalaseura",
+      "foundation_name": "Kalevalaseura-säätiö",
+      "foundation_website": "https://kalevalaseura.fi/",
+      "country": "fi",
+      "rows": 60,
+      "with_amount": 60,
+      "with_title": 60,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "tampereen-yliopiston-tukisaatio",
+      "foundation_name": "Tampereen Yliopiston Tukisäätiö",
+      "foundation_website": "https://www.tuni.fi/fi/tau/tampereen-yliopiston-tukisaatio-sr",
+      "country": "fi",
+      "rows": 60,
+      "with_amount": 60,
+      "with_title": 60,
+      "with_description": 60,
+      "years": [
+        2023,
+        2024,
+        2026
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "tampereen-kaupunki",
+      "foundation_name": "Tampereen kaupunki",
+      "foundation_website": "https://www.tampere.fi/",
+      "country": "fi",
+      "rows": 58,
+      "with_amount": 0,
+      "with_title": 0,
+      "with_description": 58,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "alfred-kordelinin-saatio",
+      "foundation_name": "Alfred Kordelinin säätiö",
+      "foundation_website": "https://www.kordelin.fi/",
+      "country": "fi",
+      "rows": 55,
+      "with_amount": 55,
+      "with_title": 55,
+      "with_description": 55,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 6
+    },
+    {
+      "foundation_slug": "aalto-tekniikan-tukisaatio",
+      "foundation_name": "Aalto-yliopiston tekniikan tukisäätiö",
+      "foundation_website": "https://www.aalto.fi/en/foundation-for-aalto-university-science-and-technology",
+      "country": "fi",
+      "rows": 53,
+      "with_amount": 53,
+      "with_title": 53,
+      "with_description": 53,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "jalmari-rauha-ahokas",
+      "foundation_name": "Jalmari ja Rauha Ahokkaan Säätiö",
+      "foundation_website": "http://www.ahokkaansaatio.org/",
+      "country": "fi",
+      "rows": 53,
+      "with_amount": 53,
+      "with_title": 52,
+      "with_description": 53,
+      "years": [
+        2024
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "national-book-council-malta",
+      "foundation_name": "National Book Council (Malta)",
+      "foundation_website": "https://ktblm.org.mt/",
+      "country": "mt",
+      "rows": 50,
+      "with_amount": 50,
+      "with_title": 50,
+      "with_description": 0,
+      "years": [
+        2024,
+        2025
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "nottbeck",
+      "foundation_name": null,
+      "foundation_website": null,
+      "country": null,
+      "rows": 50,
+      "with_amount": 50,
+      "with_title": 50,
+      "with_description": 50,
+      "years": [
+        2023,
+        2024
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "juhani-ahon-laaketieteen-tutkimussaatio",
+      "foundation_name": "Juhani Ahon Lääketieteen Tutkimussäätiö sr.",
+      "foundation_website": "https://www.juhaniahonlaaketieteensaatio.fi",
+      "country": "fi",
+      "rows": 48,
+      "with_amount": 18,
+      "with_title": 48,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "suomalainen-lakimiesyhdistys",
+      "foundation_name": "Suomalainen Lakimiesyhdistys",
+      "foundation_website": "https://www.lakimiesyhdistys.fi/",
+      "country": "fi",
+      "rows": 47,
+      "with_amount": 47,
+      "with_title": 0,
+      "with_description": 47,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "munuaissaatio",
+      "foundation_name": "Munuaissäätiö",
+      "foundation_website": "https://www.muma.fi/",
+      "country": "fi",
+      "rows": 45,
+      "with_amount": 45,
+      "with_title": 45,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "sae",
+      "foundation_name": "Suomen Arvopaperimarkkinoiden Edistämissäätiö",
+      "foundation_website": "https://www.sae.fi/",
+      "country": "fi",
+      "rows": 44,
+      "with_amount": 10,
+      "with_title": 44,
+      "with_description": 44,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 8
+    },
+    {
+      "foundation_slug": "veritautientutkimussaatio",
+      "foundation_name": "Veritautien tutkimussäätiö",
+      "foundation_website": "https://www.veritautientutkimussaatio.fi",
+      "country": "fi",
+      "rows": 43,
+      "with_amount": 0,
+      "with_title": 0,
+      "with_description": 0,
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "palkansaajasaatio",
+      "foundation_name": "Palkansaajasäätiö",
+      "foundation_website": "https://palkansaajasaatio.fi",
+      "country": "fi",
+      "rows": 42,
+      "with_amount": 42,
+      "with_title": 0,
+      "with_description": 42,
+      "years": [
+        2023
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "asianajajaliiton-saatio",
+      "foundation_name": "Suomen Asianajajaliiton Säätiö",
+      "foundation_website": "https://asianajajat.fi/",
+      "country": "fi",
+      "rows": 41,
+      "with_amount": 38,
+      "with_title": 0,
+      "with_description": 41,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 7
+    },
+    {
+      "foundation_slug": "jyvaskylan-yliopistosaatio",
+      "foundation_name": "Jyväskylän yliopistosäätiö",
+      "foundation_website": "https://www.jyu.fi/fi/meista/jyvaskylan-yliopistosaatio",
+      "country": "fi",
+      "rows": 41,
+      "with_amount": 1,
+      "with_title": 0,
+      "with_description": 41,
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "oulun-yliopiston-tukisaatio",
+      "foundation_name": "Oulun yliopiston tukisäätiö",
+      "foundation_website": "https://oulunyliopistontukisaatio.fi/",
+      "country": "fi",
+      "rows": 41,
+      "with_amount": 41,
+      "with_title": 37,
+      "with_description": 41,
+      "years": [
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "erkki-paasikivensaatio",
+      "foundation_name": "Erkki Paasikiven säätiö",
+      "foundation_website": "https://erkkipaasikivensaatio.fi/",
+      "country": "fi",
+      "rows": 40,
+      "with_amount": 40,
+      "with_title": 37,
+      "with_description": 0,
+      "years": [
+        2024,
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "skib",
+      "foundation_name": "Svenska kulturfonden i Björneborg",
+      "foundation_website": "https://skib.fi/",
+      "country": "fi",
+      "rows": 37,
+      "with_amount": 37,
+      "with_title": 0,
+      "with_description": 37,
+      "years": [
+        2023,
+        2024
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "trond-mohn-stiftelse",
+      "foundation_name": "Trond Mohn Foundation",
+      "foundation_website": "https://mohnfoundation.no/",
+      "country": "no",
+      "rows": 35,
+      "with_amount": 35,
+      "with_title": 35,
+      "with_description": 35,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 5
+    },
+    {
+      "foundation_slug": "ami-saatio",
+      "foundation_name": null,
+      "foundation_website": null,
+      "country": null,
+      "rows": 34,
+      "with_amount": 22,
+      "with_title": 34,
+      "with_description": 34,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026,
+        2027
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "ny-carlsbergfondet",
+      "foundation_name": "New Carlsberg Foundation",
+      "foundation_website": "https://ny-carlsbergfondet.dk/",
+      "country": "dk",
+      "rows": 34,
+      "with_amount": 0,
+      "with_title": 34,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "emil-aaltonen",
+      "foundation_name": "Emil Aaltosen Säätiö",
+      "foundation_website": "https://emilaaltonen.fi/",
+      "country": "fi",
+      "rows": 32,
+      "with_amount": 32,
+      "with_title": 32,
+      "with_description": 32,
+      "years": [
+        2025
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "suomalais-virolainen-kulttuurisaatio",
+      "foundation_name": "Suomalais-virolainen kulttuurisäätiö",
+      "foundation_website": "https://suvi-saatio.fi/",
+      "country": "fi",
+      "rows": 31,
+      "with_amount": 0,
+      "with_title": 0,
+      "with_description": 23,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "hss-saatio",
+      "foundation_name": "Helsingin Sanomain Säätiö",
+      "foundation_website": "https://www.hssaatio.fi/",
+      "country": "fi",
+      "rows": 29,
+      "with_amount": 29,
+      "with_title": 29,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "eschnerska-frilasarettet",
+      "foundation_name": "Stiftelsen Eschnerska Frilasarettet",
+      "foundation_website": "https://www.eschner.fi/",
+      "country": "fi",
+      "rows": 27,
+      "with_amount": 27,
+      "with_title": 0,
+      "with_description": 0,
+      "years": [
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "ortopedia-traumatologia",
+      "foundation_name": "Ortopedian ja traumatologian tutkimussäätiö",
+      "foundation_website": "https://www.otts.fi/",
+      "country": "fi",
+      "rows": 25,
+      "with_amount": 25,
+      "with_title": 25,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "suomen-ms-saatio",
+      "foundation_name": "Suomen MS-säätiö",
+      "foundation_website": "https://ms-saatio.fi/",
+      "country": "fi",
+      "rows": 24,
+      "with_amount": 24,
+      "with_title": 24,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "ornamo-saatio",
+      "foundation_name": "Ornamo-säätiö",
+      "foundation_website": "https://www.ornamosaatio.fi/",
+      "country": "fi",
+      "rows": 22,
+      "with_amount": 22,
+      "with_title": 0,
+      "with_description": 22,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "psykiatrian-tutkimussaatio",
+      "foundation_name": "Psykiatrian Tutkimussäätiö",
+      "foundation_website": "https://www.psykiatriantutkimussaatio.fi/",
+      "country": "fi",
+      "rows": 21,
+      "with_amount": 0,
+      "with_title": 21,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "alkoholitutkimussaatio",
+      "foundation_name": "Alkoholitutkimussäätiö",
+      "foundation_website": "https://alkoholitutkimussaatio.fi/",
+      "country": "fi",
+      "rows": 20,
+      "with_amount": 20,
+      "with_title": 20,
+      "with_description": 20,
+      "years": [
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "sks",
+      "foundation_name": "Suomalaisen Kirjallisuuden Seura (SKS)",
+      "foundation_website": "https://www.finlit.fi/",
+      "country": "fi",
+      "rows": 20,
+      "with_amount": 19,
+      "with_title": 0,
+      "with_description": 20,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "suomen-laaketieteensaatio",
+      "foundation_name": "Suomen Lääketieteen Säätiö",
+      "foundation_website": "https://laaketieteensaatio.rimbert.fi/",
+      "country": "fi",
+      "rows": 20,
+      "with_amount": 20,
+      "with_title": 20,
+      "with_description": 20,
+      "years": [
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "sydantutkimussaatio",
+      "foundation_name": "Sydäntutkimussäätiö",
+      "foundation_website": "https://www.sydantutkimussaatio.fi/",
+      "country": "fi",
+      "rows": 20,
+      "with_amount": 20,
+      "with_title": 20,
+      "with_description": 20,
+      "years": [
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "velux-fonden",
+      "foundation_name": "VELUX Foundation",
+      "foundation_website": "https://veluxfonden.dk/",
+      "country": "dk",
+      "rows": 20,
+      "with_amount": 20,
+      "with_title": 20,
+      "with_description": 20,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 20
+    },
+    {
+      "foundation_slug": "metsatieteellinen-seura",
+      "foundation_name": "Suomen Metsätieteellinen Seura",
+      "foundation_website": "https://metsatiede.org/",
+      "country": "fi",
+      "rows": 18,
+      "with_amount": 18,
+      "with_title": 18,
+      "with_description": 0,
+      "years": [
+        2025,
+        2026
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "olav-thon-stiftelsen",
+      "foundation_name": "The Olav Thon Foundation",
+      "foundation_website": "https://olavthonstiftelsen.no/",
+      "country": "no",
+      "rows": 18,
+      "with_amount": 18,
+      "with_title": 18,
+      "with_description": 3,
+      "years": [
+        2025,
+        2026
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "sairaanhoitajien-koulutussaatio",
+      "foundation_name": "Sairaanhoitajien koulutussäätiö",
+      "foundation_website": "https://www.shks.fi/",
+      "country": "fi",
+      "rows": 18,
+      "with_amount": 18,
+      "with_title": 18,
+      "with_description": 18,
+      "years": [
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "fuugin-saatio",
+      "foundation_name": null,
+      "foundation_website": null,
+      "country": null,
+      "rows": 13,
+      "with_amount": 13,
+      "with_title": 13,
+      "with_description": 0,
+      "years": [
+        2021,
+        2022
+      ],
+      "source_pages": 7
+    },
+    {
+      "foundation_slug": "tre-smeder",
+      "foundation_name": "Stiftelsen Tre Smeder",
+      "foundation_website": "https://tresmeder.fi/",
+      "country": "fi",
+      "rows": 12,
+      "with_amount": 12,
+      "with_title": 0,
+      "with_description": 12,
+      "years": [
+        2025,
+        2026
+      ],
+      "source_pages": 3
+    },
+    {
+      "foundation_slug": "juliana-von-wendtin-saatio",
+      "foundation_name": null,
+      "foundation_website": null,
+      "country": null,
+      "rows": 11,
+      "with_amount": 7,
+      "with_title": 11,
+      "with_description": 11,
+      "years": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "source_pages": 11
+    },
+    {
+      "foundation_slug": "suomen-metsasaatio",
+      "foundation_name": "Suomen Metsäsäätiö",
+      "foundation_website": "https://www.metsasaatio.fi/",
+      "country": "fi",
+      "rows": 10,
+      "with_amount": 10,
+      "with_title": 10,
+      "with_description": 10,
+      "years": [
+        2025,
+        2026
+      ],
+      "source_pages": 10
+    },
+    {
+      "foundation_slug": "kalevala-korun-kulttuurisaatio",
+      "foundation_name": "Kalevala Korun Kulttuurisäätiö",
+      "foundation_website": "https://www.kalevalaistennaistenliitto.fi/kulttuurisaatio/",
+      "country": "fi",
+      "rows": 9,
+      "with_amount": 9,
+      "with_title": 9,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "mll-tutkimussaatio",
+      "foundation_name": "Mannerheimin Lastensuojeluliiton tutkimussäätiö",
+      "foundation_website": "https://www.mlltutkimussaatio.fi/",
+      "country": "fi",
+      "rows": 6,
+      "with_amount": 0,
+      "with_title": 6,
+      "with_description": 6,
+      "years": [
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "tietotekniikan-tutkimussaatio",
+      "foundation_name": "Tietotekniikan tutkimussäätiö",
+      "foundation_website": "https://tietotekniikantutkimussaatio.fi",
+      "country": "fi",
+      "rows": 6,
+      "with_amount": 6,
+      "with_title": 6,
+      "with_description": 0,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "anders-chydenius",
+      "foundation_name": "Anders Chydenius -säätiö",
+      "foundation_website": "https://www.chydenius.net/",
+      "country": "fi",
+      "rows": 5,
+      "with_amount": 5,
+      "with_title": 2,
+      "with_description": 5,
+      "years": [
+        2023,
+        2024
+      ],
+      "source_pages": 2
+    },
+    {
+      "foundation_slug": "ap-saatio",
+      "foundation_name": "Ahti Pekkalan säätiö sr",
+      "foundation_website": "https://www.ap-saatio.fi/",
+      "country": "fi",
+      "rows": 4,
+      "with_amount": 0,
+      "with_title": 4,
+      "with_description": 4,
+      "years": [
+        2025
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "stenbacks-stiftelse",
+      "foundation_name": "Ruth och Nils-Erik Stenbäcks stiftelse",
+      "foundation_website": "https://stenbacksstiftelse.fi/",
+      "country": "fi",
+      "rows": 3,
+      "with_amount": 0,
+      "with_title": 0,
+      "with_description": 3,
+      "years": [
+        2026
+      ],
+      "source_pages": 1
+    },
+    {
+      "foundation_slug": "ulkopolitiikan-tutkimuksen-saatio",
+      "foundation_name": "Ulkopolitiikan tutkimuksen säätiö",
+      "foundation_website": "https://www.ulkopolitiikantutkimus.fi",
+      "country": "fi",
+      "rows": 3,
+      "with_amount": 0,
+      "with_title": 0,
+      "with_description": 3,
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "source_pages": 1
+    }
+  ]
+}

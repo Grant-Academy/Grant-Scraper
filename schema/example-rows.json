@@ -1,0 +1,41 @@
+[
+  {
+    "foundation_slug": "kone",
+    "program_slug": "saari-residenssi",
+    "award_year": 2026,
+    "recipient_name": "Professor Hope Cat",
+    "recipient_type": "individual",
+    "project_title": "After the Future",
+    "project_description": "The residency will be used as time to develop a new major music work which speculates about the impact of rising sea levels globally. This will be in the form of 60 minute song cycle engaging artistic research processes to engage a range of insights and perspectives from around the world in the development of a music work that examines, and works through, impacts of climate change to speculate about what the future may hold.",
+    "amount": 7600,
+    "currency": "EUR",
+    "source_url": "https://koneensaatio.fi/apurahat-ja-residenssipaikat/after-the-future/",
+    "scan_metadata": {
+      "source_quote": "Päähakija: Professor Hope Cat | Myöntösumma: 7600 € | Tukimuoto: Saaren kartanon residenssi | Myöntövuosi: 2026"
+    },
+    "discipline": "musiikki",
+    "confidence": 0.95,
+    "needs_review": false,
+    "review_reason": null
+  },
+  {
+    "foundation_slug": "ida-aalberg-saatio",
+    "program_slug": "general",
+    "award_year": 2025,
+    "recipient_name": "Esimerkki Näyttelijä",
+    "recipient_type": "individual",
+    "project_title": null,
+    "project_description": "näyttelijäntyön jatko-opintoihin ulkomailla",
+    "amount": 4000,
+    "currency": "EUR",
+    "source_url": "http://ida-aalberg-saatio.fi/apurahat/myonnetyt-apurahat/",
+    "scan_metadata": {
+      "source_quote": "Esimerkki Näyttelijä, näyttelijäntyön jatko-opintoihin ulkomailla, 4.000 €",
+      "extractor": "team-x/prototype@0.1"
+    },
+    "discipline": null,
+    "confidence": 0.6,
+    "needs_review": true,
+    "review_reason": "The page lists the amount once as a heading for all grants; per-row amount inferred, not read from the row."
+  }
+]

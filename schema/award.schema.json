@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Grant-Academy/Grant-Scraper/schema/award.schema.json",
+  "title": "Grant award row",
+  "description": "One awarded grant as the Grant Academy production importer accepts it (table wt_grant_awards, RPC wt_upsert_grant_awards), plus the three fields this challenge adds on top: confidence, needs_review and discipline. Required in production: foundation_slug, program_slug, award_year, recipient_name, source_url. Everything else may be null when the funder does not publish it — a null is always better than a guess.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["foundation_slug", "program_slug", "award_year", "recipient_name", "source_url"],
+  "properties": {
+    "foundation_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Stable kebab-case identifier of the funder, e.g. \"skr\", \"koneen-saatio\", \"ida-aalberg-saatio\". For a funder not yet in the catalogue, derive it from the domain or name; it only has to be consistent within your output."
+    },
+    "program_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "The funder's grant programme or call the award belongs to, e.g. \"tyoskentelyapuraha\", \"saari-residenssi\". Use \"general\" when the funder publishes one undifferentiated list."
+    },
+    "award_year": {
+      "type": "integer",
+      "minimum": 1990,
+      "maximum": 2100,
+      "description": "The year the grant was decided or announced. Must come from the page or its URL, never from the model's guess."
+    },
+    "recipient_name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Recipient exactly as the funder published it, in nominative form (\"Maija Meikäläinen\", not \"Maija Meikäläiselle\"). Joint recipients stay on one row as published (\"Vehmaanperä Juha ja Peltonen Elias\"). Never enriched from other sources."
+    },
+    "recipient_type": {
+      "type": ["string", "null"],
+      "enum": ["individual", "organization", "group", null],
+      "description": "individual = a person; organization = a legal entity (ry, oy, säätiö, kunta, museum…); group = a named working group or collective that is not a registered organisation."
+    },
+    "project_title": {
+      "type": ["string", "null"],
+      "description": "The funder's own title for the project, verbatim. Null when the page carries none."
+    },
+    "project_description": {
+      "type": ["string", "null"],
+      "description": "The funder's own description or stated purpose, verbatim and in the source language. Do not summarise, translate, or merge with the title. Often lives on a per-project page behind the list row; look there before settling for the title."
+    },
+    "amount": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "description": "Awarded sum in the funder's currency, as a plain number. Finnish pages write \"3.000 €\", \"3 000 €\" and \"3000 euroa\" for the same value; the dot is a thousands separator, never a decimal point. Null when the page publishes no per-recipient sum (only yearly totals, or names only)."
+    },
+    "currency": {
+      "type": ["string", "null"],
+      "pattern": "^[A-Z]{3}$",
+      "description": "ISO 4217 code. Required whenever amount is set. Keep SEK/NOK/DKK as published — never convert to EUR."
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The exact page or PDF the row was read from, so a human can verify it in one click. For paginated or per-year pages, the specific page — not the site root."
+    },
+    "scan_metadata": {
+      "type": "object",
+      "description": "Provenance. Free-form JSON in production; the keys below are the ones our tooling reads.",
+      "properties": {
+        "source_quote": {
+          "type": "string",
+          "description": "Verbatim text from the source page that carries this row's name and amount — the evidence the row is real. Our production validator drops any row whose recipient name cannot be found in the page text and clears any amount that cannot be found as a number."
+        },
+        "description_source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Where project_description came from when it was not on the list page."
+        },
+        "extractor": {
+          "type": "string",
+          "description": "Which prototype / model / version produced the row."
+        }
+      },
+      "additionalProperties": true
+    },
+    "discipline": {
+      "type": ["string", "null"],
+      "description": "Challenge-only field. The funder's own field label when it publishes one (\"kuvataide\", \"säveltaide\", \"tutkimus\"), verbatim. Not a column on the production row — production derives it from the programme — but it is what makes the combined table readable across funders."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Challenge-only field. The extractor's honest estimate that every non-null field on this row is correct. Calibration is what we score: a 0.9 row should be wrong about one time in ten."
+    },
+    "needs_review": {
+      "type": "boolean",
+      "description": "Challenge-only field. True when the extractor was unsure about anything on the row — the amount could belong to the neighbouring line, the name is inflected and the nominative is a guess, the year came from context rather than the page. Rows with needs_review true go to the separate review list, never silently into the table."
+    },
+    "review_reason": {
+      "type": ["string", "null"],
+      "description": "Challenge-only field. One sentence saying what the extractor was unsure about, so the reviewer knows where to look."
+    }
+  }
+}
