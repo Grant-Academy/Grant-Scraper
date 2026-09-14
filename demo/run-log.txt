@@ -1,0 +1,59 @@
+# grantscrape demo run — 14 Sep 2026, ~19:20 EEST
+# Code: branch mikke @ 7a5a9e2. Python 3.12 (docker python:3.12-slim).
+# Extraction: headless backend, --backend openrouter --model anthropic/claude-sonnet-5 (first live run of the backend).
+# Fetch/discover: live network. Total wall time incl. model calls: ~4 min.
+
+$ grantscrape discover https://www.valokuvataiteenmuseo.fi/ --probe 8 --top 5
+ score  € amts  kind  url  [link text | found via]
+  9.83      47  html  https://www.valokuvataiteenmuseo.fi/fi/museoinfo/apurahat-ja-palkinnot/tutkimusapurahat  [Tutkimusapurahat | linked from /fi/museoinfo/apurahat-ja-palkinnot]
+  2.17       1  html  https://www.valokuvataiteenmuseo.fi/fi/museoinfo/apurahat-ja-palkinnot  [Apurahat ja palkinnot | homepage, ...]
+  0.67       1  html  https://www.valokuvataiteenmuseo.fi/fi/museoinfo/medialle/ajankohtaista/kulttuurin-kummilapset-syksy-2026  [...]
+
+$ grantscrape discover https://www.suomentietokirjailijat.fi/ --probe 8 --top 5
+ 11.17       1  html  https://www.suomentietokirjailijat.fi/kirjailijalle/apurahat/myonnetyt-apurahat/syksyn-apurahansaajat/  [ | sitemap]
+ 11.17       1  html  https://www.suomentietokirjailijat.fi/kirjailijalle/apurahat/myonnetyt-apurahat/kevaan-apurahansaajat/  [ | sitemap]
+   8.0       0  html  https://www.suomentietokirjailijat.fi/kirjailijalle/apurahat/myonnetyt-apurahat/tietokirjakritiikkiapurahan-saajat/  [ | sitemap]
+
+$ grantscrape fetch https://www.hubersaatio.fi/myonnetyt-apurahat/ --run hubersaatio --foundation "Samuel Huberin taidesäätiö"
+9 chunk(s) written to runs/hubersaatio/chunks
+$ grantscrape fetch https://www.karjalankulttuurirahasto.fi/wp-content/uploads/2024/12/Myonnetyt-apurahat-2024.pdf --run karjalan-kulttuurirahasto --foundation "Karjalan Kulttuurirahasto"
+3 chunk(s) written (pdf, per page)
+$ grantscrape fetch https://www.valokuvataiteenmuseo.fi/fi/museoinfo/apurahat-ja-palkinnot/tutkimusapurahat --run valokuvataiteen-museo --foundation "Suomen valokuvataiteen museo"
+17 chunk(s) written
+$ grantscrape fetch https://www.suomentietokirjailijat.fi/kirjailijalle/apurahat/myonnetyt-apurahat/kevaan-apurahansaajat/ --run suomen-tietokirjailijat --foundation "Suomen tietokirjailijat ry"
+3 chunk(s) written
+
+$ for r in karjalan-kulttuurirahasto suomen-tietokirjailijat hubersaatio valokuvataiteen-museo; do grantscrape extract --run $r --backend openrouter --model anthropic/claude-sonnet-5 --workers 4; done
+wrote 3 rows file(s): 000 001 002
+wrote 3 rows file(s): 000 001 002
+wrote 9 rows file(s): 000 ... 008
+wrote 17 rows file(s): 000 ... 016
+
+$ grantscrape validate --run suomen-tietokirjailijat
+run suomen-tietokirjailijat: 113 rows, 0 needs_review, 0 duplicates dropped
+$ grantscrape validate --run hubersaatio
+run hubersaatio: 41 rows, 0 needs_review, 0 duplicates dropped
+$ grantscrape validate --run karjalan-kulttuurirahasto
+run karjalan-kulttuurirahasto: 51 rows, 1 needs_review, 0 duplicates dropped
+top review reasons:
+     1  recipient name looks malformed in the source (ends in a lone letter, possibly cut off)
+     1  agent confidence 0.60 below 0.70
+$ grantscrape validate --run valokuvataiteen-museo
+run valokuvataiteen-museo: 45 rows, 0 needs_review, 0 duplicates dropped
+
+$ grantscrape combine --out out
+combined 4 run(s): 250 rows, 1 needs_review -> out/awards.jsonl|csv|json, table.csv, needs_review.csv, summary.json
+  Karjalan Kulttuurirahasto: 51 rows, 1 review, years 2024-2024, total €255,652     # PDF states: Yhteensä 52 kpl 256 152 € -> 51+1 rows, 255 652 + 500 = 256 152
+  Samuel Huberin taidesäätiö: 41 rows, 0 review, years 2026-2026, total €116,030    # page states kokonaissumma 116 030 €
+  Suomen tietokirjailijat ry: 113 rows, 0 review, years 2026-2026, total €642,000   # page states 113 saajaa, 642 000 €
+  Suomen valokuvataiteen museo: 45 rows, 0 review, years 2011-2026, total €173,000
+
+$ python3 eval/score.py --pred out/stk.jsonl --funder suomen-tietokirjailijat --year 2026
+suomen-tietokirjailijat / 2026: ground truth 113 rows, predicted 113, matched 113
+  precision 100.0%   recall 100.0%   F1 100.0%
+  amounts: 113/113 exact, 0 missing, 0 wrong
+  project_title present: 113/113 of the rows where the funder publishes one
+  confidence: mean 0.921 on correct rows, None on wrong rows
+  needs_review: 0 flagged; precision of the unflagged rows 1.0
+
+schema check: 251 rows in awards.jsonl, 0 invalid against schema/award.schema.json

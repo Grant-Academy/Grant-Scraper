@@ -1,0 +1,36 @@
+{
+  "funder": "suomen-tietokirjailijat",
+  "year": 2026,
+  "ground_truth_rows": 113,
+  "predicted_rows": 113,
+  "matched": 113,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "amount": {
+    "scored": 113,
+    "exact": 113,
+    "missing_in_prediction": 0,
+    "wrong": 0
+  },
+  "project_title": {
+    "ground_truth_has": 113,
+    "prediction_has": 113
+  },
+  "project_description": {
+    "ground_truth_has": 113,
+    "prediction_has": 0
+  },
+  "confidence": {
+    "mean_on_correct_rows": 0.921,
+    "mean_on_wrong_rows": null
+  },
+  "needs_review": {
+    "flagged": 0,
+    "precision_of_unflagged": 1.0
+  },
+  "examples": {
+    "missed": [],
+    "not_in_ground_truth": []
+  }
+}

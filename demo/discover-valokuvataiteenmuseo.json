@@ -1,0 +1,58 @@
+{
+ "site": "https://www.valokuvataiteenmuseo.fi/",
+ "robots_txt_found": true,
+ "candidates": [
+  {
+   "url": "https://www.valokuvataiteenmuseo.fi/fi/museoinfo/apurahat-ja-palkinnot/tutkimusapurahat",
+   "text": "Tutkimusapurahat",
+   "found_via": [
+    "linked from /fi/museoinfo/apurahat-ja-palkinnot"
+   ],
+   "kind": "html",
+   "score": 9.83,
+   "amounts_on_page": 47
+  },
+  {
+   "url": "https://www.valokuvataiteenmuseo.fi/fi/museoinfo/apurahat-ja-palkinnot",
+   "text": "Apurahat ja palkinnot",
+   "found_via": [
+    "homepage",
+    "linked from /fi/museoinfo/apurahat-ja-palkinnot",
+    "linked from /fi/museoinfo/medialle/ajankohtaista/kulttuurin-kummilapset-syksy-2026"
+   ],
+   "kind": "html",
+   "score": 2.17,
+   "amounts_on_page": 1
+  },
+  {
+   "url": "https://www.valokuvataiteenmuseo.fi/fi/museoinfo/medialle/ajankohtaista/kulttuurin-kummilapset-syksy-2026",
+   "text": "Kulttuurin kummilapset - Syksy 2026",
+   "found_via": [
+    "homepage"
+   ],
+   "kind": "html",
+   "score": 0.67,
+   "amounts_on_page": 1
+  },
+  {
+   "url": "https://www.valokuvataiteenmuseo.fi/sv/museoinfo-sv/press/kulturens-fadderbarn-hosten-2025",
+   "text": "sv",
+   "found_via": [
+    "linked from /fi/museoinfo/medialle/ajankohtaista/kulttuurin-kummilapset-syksy-2026"
+   ],
+   "kind": "html",
+   "score": 0.67,
+   "amounts_on_page": 1
+  },
+  {
+   "url": "https://www.valokuvataiteenmuseo.fi/en/museum-info/press/culture-kids-autumn-2025",
+   "text": "en",
+   "found_via": [
+    "linked from /fi/museoinfo/medialle/ajankohtaista/kulttuurin-kummilapset-syksy-2026"
+   ],
+   "kind": "html",
+   "score": 0.67,
+   "amounts_on_page": 1
+  }
+ ]
+}

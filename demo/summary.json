@@ -1,0 +1,239 @@
+{
+ "rows": 250,
+ "needs_review": 1,
+ "by_foundation": {
+  "Karjalan Kulttuurirahasto": {
+   "rows": 51,
+   "needs_review": 1,
+   "total_amount": 255652.0,
+   "years": [
+    2024
+   ]
+  },
+  "Samuel Huberin taidesäätiö": {
+   "rows": 41,
+   "needs_review": 0,
+   "total_amount": 116030.0,
+   "years": [
+    2026
+   ]
+  },
+  "Suomen tietokirjailijat ry": {
+   "rows": 113,
+   "needs_review": 0,
+   "total_amount": 642000.0,
+   "years": [
+    2026
+   ]
+  },
+  "Suomen valokuvataiteen museo": {
+   "rows": 45,
+   "needs_review": 0,
+   "total_amount": 173000.0,
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ]
+  }
+ },
+ "by_year": {
+  "2011": {
+   "rows": 4,
+   "total_amount": 7500.0,
+   "person": 4,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2012": {
+   "rows": 2,
+   "total_amount": 9500.0,
+   "person": 2,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2013": {
+   "rows": 3,
+   "total_amount": 8500.0,
+   "person": 3,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2014": {
+   "rows": 3,
+   "total_amount": 8500.0,
+   "person": 2,
+   "organisation": 0,
+   "group": 1,
+   "unknown": 0
+  },
+  "2015": {
+   "rows": 3,
+   "total_amount": 10000.0,
+   "person": 3,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2016": {
+   "rows": 2,
+   "total_amount": 8000.0,
+   "person": 2,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2017": {
+   "rows": 4,
+   "total_amount": 14000.0,
+   "person": 4,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2018": {
+   "rows": 5,
+   "total_amount": 15000.0,
+   "person": 4,
+   "organisation": 0,
+   "group": 1,
+   "unknown": 0
+  },
+  "2019": {
+   "rows": 3,
+   "total_amount": 10000.0,
+   "person": 3,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2020": {
+   "rows": 3,
+   "total_amount": 10000.0,
+   "person": 3,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2021": {
+   "rows": 2,
+   "total_amount": 10000.0,
+   "person": 2,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2022": {
+   "rows": 1,
+   "total_amount": 10000.0,
+   "person": 0,
+   "organisation": 0,
+   "group": 1,
+   "unknown": 0
+  },
+  "2023": {
+   "rows": 2,
+   "total_amount": 10000.0,
+   "person": 2,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2024": {
+   "rows": 53,
+   "total_amount": 265652.0,
+   "person": 9,
+   "organisation": 38,
+   "group": 6,
+   "unknown": 0
+  },
+  "2025": {
+   "rows": 2,
+   "total_amount": 10000.0,
+   "person": 2,
+   "organisation": 0,
+   "group": 0,
+   "unknown": 0
+  },
+  "2026": {
+   "rows": 158,
+   "total_amount": 780030.0,
+   "person": 135,
+   "organisation": 4,
+   "group": 19,
+   "unknown": 0
+  }
+ },
+ "discipline_by_year": {
+  "2011": {
+   "valokuvatutkimus": 4
+  },
+  "2012": {
+   "valokuvatutkimus": 2
+  },
+  "2013": {
+   "valokuvatutkimus": 3
+  },
+  "2014": {
+   "valokuvatutkimus": 3
+  },
+  "2015": {
+   "valokuvatutkimus": 3
+  },
+  "2016": {
+   "valokuvatutkimus": 2
+  },
+  "2017": {
+   "valokuvatutkimus": 4
+  },
+  "2019": {
+   "valokuvatutkimus": 3
+  },
+  "2020": {
+   "valokuvatutkimus": 3
+  },
+  "2021": {
+   "valokuvatutkimus": 2
+  },
+  "2022": {
+   "valokuvatutkimus": 1
+  },
+  "2023": {
+   "valokuvatutkimus": 2
+  },
+  "2024": {
+   "valokuvatutkimus": 2
+  },
+  "2025": {
+   "valokuvatutkimus": 2
+  },
+  "2026": {
+   "esitystaide": 22,
+   "musiikki": 21,
+   "teatteri": 12,
+   "tanssi": 12,
+   "valokuvatutkimus": 4,
+   "sirkus": 3,
+   "musik": 1,
+   "live art": 1,
+   "teater": 1,
+   "dans": 1
+  }
+ }
+}

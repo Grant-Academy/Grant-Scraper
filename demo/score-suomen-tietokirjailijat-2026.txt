@@ -1,0 +1,7 @@
+suomen-tietokirjailijat / 2026: ground truth 113 rows, predicted 113, matched 113
+  precision 100.0%   recall 100.0%   F1 100.0%
+  amounts: 113/113 exact, 0 missing, 0 wrong
+  project_title present: 113/113 of the rows where the funder publishes one
+  project_description present: 0/113
+  confidence: mean 0.921 on correct rows, None on wrong rows
+  needs_review: 0 flagged; precision of the unflagged rows 1.0
